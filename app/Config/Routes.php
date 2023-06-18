@@ -108,7 +108,9 @@ $routes->group('keuangan', ['filter' => 'roleFilter'], function ($routes) {
     $routes->get('transaksi_riwayat', 'Keuangan\Transaksi::riwayat');
     //endTransaksi
     //search
-    $routes->post('search', 'Admin\Search::index');
+    $routes->match(['get', 'post'], 'search', 'Admin\Search::index');
+
+
     //endSearch
 
 });

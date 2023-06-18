@@ -1,113 +1,103 @@
 <?= $this->extend('template/index');
 
 $this->section('page_content');
-
 ?>
 
 <div class="row justify-content-center">
     <div class="col">
-        <div class="card shadow mx-2 mb-3">
+        <div class="card shadow mx-2">
+            <div class="card-header">
+                Riwayat Transaksi
+                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100" action="<?= base_url() ?><?= $user['nama_role']; ?>/search" method="post">
+                    <div class="input-group">
+                        <input type="text" class="form-control bg-light border-0 small" placeholder="Keyword" name="keyword">
+                        <input type="date" class="form-control bg-light border-0 small" placeholder="Tanggal Awal" name="start_date">
+                        <input type="date" class="form-control bg-light border-0 small" placeholder="Tanggal Akhir" name="end_date">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-search fa-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
             <div class="card-body">
-                <h4 class="card-title">DATA DITEMUKAN <?= $keyword; ?></h4>
-                <div class="row justify-content-center mb-4">
-                    <div class="col-md-6">
-                        <div class="table-responsive-lg">
-                            <table class="table-borderless">
-                                <tbody>
-                                    <tr>
-                                        <td>Nomor Pokok Mahasiswa </td>
-                                        <td>:<?= $result[0]['npm']; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Nama </td>
-                                        <td>:<?= $result[0]['nama']; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email </td>
-                                        <td>:<?= $result[0]['email']; ?></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="table-responsive-lg">
-                            <table class="table-borderless">
-                                <tbody>
-                                    <tr>
-                                        <td>Nomor Kartu Mahasiswa </td>
-                                        <td>:<?= $result[0]['nomor_kartu']; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Saldo </td>
-                                        <td>:<?= 'Rp ' . number_format($result[0]['saldo'], 0, ',', '.'); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Role </td>
-                                        <td>:<?= ucfirst($result[0]['nama_role']); ?></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <h4 class="card-title">Transaksi <?= $result[0]['nama']; ?>(<?= $result[0]['npm']; ?>)</h4>
-                
                 <div class="table-responsive-lg">
                     <table class="table table-hover">
                         <thead class="table-success">
                             <tr>
                                 <th>#</th>
                                 <th>Kode Booking</th>
+                                <th>NIM</th>
                                 <th>Jenis Transaksi</th>
-                                <th>Saldo Awal</th>
-                                <th>Nominal</th>
-                                <th>Saldo Akhir</th>
+                                <th>Nominal Transaksi</th>
                                 <th>Status</th>
+                                <th>Metode Pembayaran</th>
+                                <th>Bukti Transfer</th>
                                 <th>Tanggal</th>
+                                <th>Cetak</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                            $i = 1; // Variabel penomoran
+                            $i = 1 + ($limit * ($currentPage - 1)); // Variabel penomoran
 
-                            foreach ($result as $res) :
+                            foreach ( $result[0] as $tr) :
                             ?>
                                 <tr>
                                     <td><?= $i++; ?></td>
-                                    <td><?= $res['kodebooking_transaksi']; ?></td>
+                                    <td><?= $tr['kodebooking_transaksi']; ?></td>
+                                    <td><?= $tr['npm']; ?></td>
                                     <td>
-                                        <?php if ($res['id_jenis_transaksi'] == 1) : ?>
-                                            <span class="badge badge-info"><?= $res['nama_jenis_transaksi']; ?></span>
-                                        <?php elseif ($res['id_jenis_transaksi'] == 2) : ?>
-                                            <span class="badge badge-warning"><?= $res['nama_jenis_transaksi']; ?></span>
-                                        <?php elseif ($res['id_jenis_transaksi'] == 3) : ?>
-                                            <span class="badge badge-success"><?= $res['nama_jenis_transaksi']; ?></span>
+                                        <?php if ($tr['id_jenis_transaksi'] == 1) : ?>
+                                            <span class="badge badge-info"><?= $tr['nama_jenis_transaksi']; ?></span>
+                                        <?php elseif ($tr['id_jenis_transaksi'] == 2) : ?>
+                                            <span class="badge badge-warning"><?= $tr['nama_jenis_transaksi']; ?></span>
+                                        <?php elseif ($tr['id_jenis_transaksi'] == 3) : ?>
+                                            <span class="badge badge-success"><?= $tr['nama_jenis_transaksi']; ?></span>
                                         <?php endif ?>
                                     </td>
-                                    <td><?= 'Rp ' . number_format($res['saldoawal_transaksi']); ?></td>
-                                    <td><?= 'Rp ' . number_format($res['nominal_transaksi']); ?></td>
-                                    <td><?= 'Rp ' . number_format($res['saldoakhir_transaksi']); ?></td>
+                                    <td><?= 'Rp ' . number_format($tr['nominal_transaksi']); ?></td>
                                     <td>
-                                        <?php if ($res['id_status_transaksi'] == 1) : ?>
-                                            <span class="badge badge-danger"><?= $res['nama_status_transaksi']; ?></span>
-                                        <?php else : ?>
-                                            <span class="badge badge-success"><?= $res['nama_status_transaksi']; ?></span>
+                                        <?php if ($tr['id_status_transaksi'] == 1) : ?>
+                                            <span class="badge badge-warning"><?= $tr['nama_status_transaksi']; ?></span>
+                                        <?php elseif ($tr['id_status_transaksi'] == 2) : ?>
+                                            <span class="badge badge-success"><?= $tr['nama_status_transaksi']; ?></span>
+                                        <?php elseif ($tr['id_status_transaksi'] == 3) : ?>
+                                            <span class="badge badge-success"><?= $tr['nama_status_transaksi']; ?></span>
+                                        <?php elseif ($tr['id_status_transaksi'] == 4) : ?>
+                                            <span class="badge badge-danger"><?= $tr['nama_status_transaksi']; ?></span>
                                         <?php endif ?>
                                     </td>
-                                    <td><?= $res['updated_at']; ?></td>
+                                    <td>
+                                        <?php if ($tr['id_jenis_pembayaran'] == 1) : ?>
+                                            <span class="badge badge-primary"><?= $tr['nama_jenis_pembayaran']; ?></span>
+                                        <?php elseif ($tr['id_jenis_pembayaran'] == 2) : ?>
+                                            <span class="badge badge-secondary"><?= $tr['nama_jenis_pembayaran']; ?></span>
+                                        <?php endif ?>
+                                    </td>
+                                    <td>
+                                        <?php if ($tr['id_jenis_pembayaran'] == 2 && $tr['id_status_transaksi'] != 4): ?>
+                                            <button type="button" class="btn btn-primary" style="padding: 5px 5px;" onclick="openImageInNewTab('<?= base_url('uploads/bukti/' . $tr['bukti_pembayaran']); ?>')">Lihat Bukti</button>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td><?= $tr['updated_at']; ?></td>
+                                    <td>
+                                        <?php if ($tr['id_status_transaksi'] == 3) : ?>
+                                            <form method="POST" action="<?= base_url(); ?>keuangan/cetak/<?= $tr['id_transaksi']; ?>">
+                                                <button type="submit" class="btn btn-primary">Cetak</button>
+                                            </form>
+                                        <?php endif; ?>
+                                    </td>
                                 </tr>
-                            <?php
-                            endforeach;
-                            ?>
-
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
+                    <?= $pager->links('pagination', 'pagination'); ?>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 <?= $this->endSection(); ?>

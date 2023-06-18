@@ -39,6 +39,8 @@
 
                     <input type="hidden" name="id_jenis_transaksi" value="3">
                     <input type="hidden" name="id_status_transaksi" value="2">
+                    <input type="hidden" name="id_jenis_pembayaran" value="1">
+                    
              
             </div>
         </div>

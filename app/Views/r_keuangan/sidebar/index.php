@@ -21,7 +21,7 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Users
+        Pengguna
     </div>
 
     <!-- Nav Item Tambah Data Pengguna -->
@@ -56,7 +56,9 @@
 
     <!-- Divider -->
     <hr class="sidebar-divider">
-
+    <div class="sidebar-heading">
+        Informasi
+    </div>
     <!-- Nav Item - Tables -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>keuangan/listPengumuman">

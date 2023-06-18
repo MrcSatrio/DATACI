@@ -2,22 +2,38 @@
 
 $this->section('page_content');
 ?>
-
+<?php if (!empty(session()->getFlashdata('error'))) : ?>
+    <div class="alert alert-danger" role="alert">
+        <?= session()->getFlashdata('error'); ?>
+    </div>
+<?php endif; ?>
 <div class="row justify-content-center">
     <div class="col">
         <div class="card shadow mx-2">
             <div class="card-header">
                 Riwayat Transaksi
-                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100" action="<?= base_url() ?><?= $user['nama_role']; ?>/search" method="post">
-                    <div class="input-group">
-                        <input type="date" class="form-control bg-light border-0 small" placeholder="Cari Transaksi" aria-label="Search" aria-describedby="basic-addon2" name="keyword">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="submit">
-                                <i class="fas fa-search fa-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
+                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100" action="<?= base_url() ?><?= $user['nama_role']; ?>/search" method="POST">
+    <div class="input-group">
+        <input type="text" class="form-control bg-light border-0 small" placeholder="Keyword" name="keyword">
+
+        <div class="form-group">
+            <label for="start_date">Tanggal Mulai:</label>
+            <input type="date" name="start_date" id="start_date" class="form-control">
+        </div>
+        
+        <div class="form-group">
+            <label for="end_date">Tanggal Akhir:</label>
+            <input type="date" name="end_date" id="end_date" class="form-control">
+        </div>
+
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit">
+                <i class="fas fa-search fa-sm"></i>
+            </button>
+        </div>
+    </div>
+</form>
+
             </div>
             <div class="card-body">
                 <div class="table-responsive-lg">
@@ -31,7 +47,7 @@ $this->section('page_content');
                                 <th>Nominal Transaksi</th>
                                 <th>Status</th>
                                 <th>Metode Pembayaran</th>
-                                <th>Bukti Pembayaran</th>
+                                <th>Bukti Transfer</th>
                                 <th>Tanggal</th>
                                 <th>Cetak</th>
                             </tr>

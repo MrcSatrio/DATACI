@@ -43,6 +43,7 @@ class CheckOut extends BaseController
                 'nominal_transaksi' => $nominal_transaksi,
                 'saldoakhir_transaksi' => $user_parking['saldo'] - $nominal_transaksi,
                 'id_status_transaksi' => $this->request->getVar('id_status_transaksi'),
+                'id_jenis_pembayaran' => $this->request->getVar('id_jenis_pembayaran'),
             ]);
             $this->kartuModel->save([
                 'id_kartu' => $user_parking['id_kartu'],
@@ -68,6 +69,7 @@ class CheckOut extends BaseController
                     'nominal_transaksi' => $nominal_transaksi,
                     'saldoakhir_transaksi' => $user_parking['saldo'] - $nominal_transaksi,
                     'id_status_transaksi' => $this->request->getVar('id_status_transaksi'),
+                    'id_jenis_pembayaran' => $this->request->getVar('id_jenis_pembayaran'),
                 ]);
                 $this->kartuModel->save([
                     'id_kartu' => $user_parking['id_kartu'],

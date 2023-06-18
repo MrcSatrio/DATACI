@@ -58,6 +58,7 @@ $this->section('page_content'); ?>
                                 <th>Nominal</th>
                                 <th>Saldo Akhir</th>
                                 <th>Status</th>
+                                <th>Bukti Transfer</th>
                                 <th>Tanggal</th>
                             </tr>
                         </thead>
@@ -98,6 +99,11 @@ foreach (array_slice($transaksi, 0, $limit) as $tr) :
                     <span class="badge badge-success"><?= $tr['nama_status_transaksi']; ?></span>
                 <?php endif ?>
             </td>
+            <td>
+                                        <?php if ($tr['id_jenis_pembayaran'] == 2 && $tr['id_status_transaksi'] != 4): ?>
+                                            <button type="button" class="btn btn-primary" style="padding: 5px 5px;" onclick="openImageInNewTab('<?= base_url('uploads/bukti/' . $tr['bukti_pembayaran']); ?>')">Lihat Bukti</button>
+                                        <?php endif; ?>
+                                    </td>
             <td><?= $tr['updated_at']; ?></td>
         </tr>
 <?php
