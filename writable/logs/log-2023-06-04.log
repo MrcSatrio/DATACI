@@ -1,0 +1,815 @@
+INFO - 2023-06-04 21:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 21:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 21:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 21:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 21:59:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 21:59:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 21:59:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 21:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 21:59:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 21:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 21:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 21:59:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 21:59:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:03:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:03:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:05:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 22:07:07 --> Undefined array key "saldo"
+in APPPATH\Views\r_admin\dashboard.php on line 15.
+ 1 APPPATH\Views\r_admin\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "saldo"', 'C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_admin\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin\Dashboard.php(21): view('r_admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 22:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:11:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 22:11:11 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\r_admin\dashboard.php on line 81.
+ 1 APPPATH\Views\r_admin\dashboard.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_admin\\dashboard.php', 81)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin\Dashboard.php(37): view('r_admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 22:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 22:13:06 --> Undefined array key "saldo"
+in APPPATH\Views\r_admin\dashboard.php on line 13.
+ 1 APPPATH\Views\r_admin\dashboard.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "saldo"', 'C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_admin\\dashboard.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin\Dashboard.php(37): view('r_admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 22:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 22:13:07 --> Undefined array key "saldo"
+in APPPATH\Views\r_admin\dashboard.php on line 13.
+ 1 APPPATH\Views\r_admin\dashboard.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "saldo"', 'C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_admin\\dashboard.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin\Dashboard.php(37): view('r_admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 22:15:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:19:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:20:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:22:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:26:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-04 22:26:48 --> mysqli_sql_exception: Duplicate entry '2147483647' for key 'PRIMARY' in C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\app\Controllers\Admin\User.php(80): CodeIgniter\Model->insert(Array)
+#8 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+#9 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+#10 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\...')
+#13 {main}
+CRITICAL - 2023-06-04 22:26:48 --> Duplicate entry '2147483647' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'9021320109\', 40, \'2\', \'Quo blanditiis iure \', \'docupy@mailinator.com\', \'d2525fb914730d8d4c4247ea4c3650e1\', \'2023-06-04 22:26:48\', \'2023-06-04 22:26:48\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'9021320109\', 40, \'2\', \'Quo blanditiis iure \', \'docupy@mailinator.com\', \'d2525fb914730d8d4c4247ea4c3650e1\', \'2023-06-04 22:26:48\', \'2023-06-04 22:26:48\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'9021320109\', 40, \'2\', \'Quo blanditiis iure \', \'docupy@mailinator.com\', \'d2525fb914730d8d4c4247ea4c3650e1\', \'2023-06-04 22:26:48\', \'2023-06-04 22:26:48\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\User.php(80): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 22:26:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:27:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-04 22:27:02 --> mysqli_sql_exception: Duplicate entry '2147483647' for key 'PRIMARY' in C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\app\Controllers\Admin\User.php(80): CodeIgniter\Model->insert(Array)
+#8 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+#9 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+#10 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\...')
+#13 {main}
+CRITICAL - 2023-06-04 22:27:02 --> Duplicate entry '2147483647' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 41, \'2\', \'Quo blanditiis iure \', \'docupy@mailinator.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:27:02\', \'2023-06-04 22:27:02\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 41, \'2\', \'Quo blanditiis iure \', \'docupy@mailinator.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:27:02\', \'2023-06-04 22:27:02\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 41, \'2\', \'Quo blanditiis iure \', \'docupy@mailinator.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:27:02\', \'2023-06-04 22:27:02\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\User.php(80): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 22:27:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:27:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-04 22:27:28 --> mysqli_sql_exception: Duplicate entry '2147483647' for key 'PRIMARY' in C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\app\Controllers\Admin\User.php(80): CodeIgniter\Model->insert(Array)
+#8 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+#9 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+#10 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\...')
+#13 {main}
+CRITICAL - 2023-06-04 22:27:28 --> Duplicate entry '2147483647' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320065\', 42, \'2\', \'Quo blanditiis iure \', \'docupy@mailinator.com\', \'316a2c24455b50917eb774d028c0f8d1\', \'2023-06-04 22:27:28\', \'2023-06-04 22:27:28\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320065\', 42, \'2\', \'Quo blanditiis iure \', \'docupy@mailinator.com\', \'316a2c24455b50917eb774d028c0f8d1\', \'2023-06-04 22:27:28\', \'2023-06-04 22:27:28\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320065\', 42, \'2\', \'Quo blanditiis iure \', \'docupy@mailinator.com\', \'316a2c24455b50917eb774d028c0f8d1\', \'2023-06-04 22:27:28\', \'2023-06-04 22:27:28\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\User.php(80): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 22:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:27:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-04 22:28:00 --> mysqli_sql_exception: Duplicate entry '2147483647' for key 'PRIMARY' in C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\app\Controllers\Admin\User.php(80): CodeIgniter\Model->insert(Array)
+#8 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+#9 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+#10 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\...')
+#13 {main}
+CRITICAL - 2023-06-04 22:28:00 --> Duplicate entry '2147483647' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 43, \'4\', \'UUS AJA\', \'marcsatriof11f@gmail.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:28:00\', \'2023-06-04 22:28:00\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 43, \'4\', \'UUS AJA\', \'marcsatriof11f@gmail.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:28:00\', \'2023-06-04 22:28:00\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 43, \'4\', \'UUS AJA\', \'marcsatriof11f@gmail.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:28:00\', \'2023-06-04 22:28:00\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\User.php(80): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 22:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-04 22:29:04 --> mysqli_sql_exception: Duplicate entry '2147483647' for key 'PRIMARY' in C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\app\Controllers\Admin\User.php(80): CodeIgniter\Model->insert(Array)
+#8 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+#9 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+#10 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\...')
+#13 {main}
+CRITICAL - 2023-06-04 22:29:04 --> Duplicate entry '2147483647' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 44, \'4\', \'UUS AJA\', \'marcsatriof11f@gmail.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:29:04\', \'2023-06-04 22:29:04\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 44, \'4\', \'UUS AJA\', \'marcsatriof11f@gmail.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:29:04\', \'2023-06-04 22:29:04\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 44, \'4\', \'UUS AJA\', \'marcsatriof11f@gmail.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:29:04\', \'2023-06-04 22:29:04\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\User.php(80): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 22:29:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-04 22:29:10 --> mysqli_sql_exception: Duplicate entry '2147483647' for key 'PRIMARY' in C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\app\Controllers\Admin\User.php(80): CodeIgniter\Model->insert(Array)
+#8 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+#9 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+#10 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\...')
+#13 {main}
+CRITICAL - 2023-06-04 22:29:10 --> Duplicate entry '2147483647' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 45, \'4\', \'UUS AJA\', \'marcsatriof11f@gmail.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:29:10\', \'2023-06-04 22:29:10\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 45, \'4\', \'UUS AJA\', \'marcsatriof11f@gmail.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:29:10\', \'2023-06-04 22:29:10\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 45, \'4\', \'UUS AJA\', \'marcsatriof11f@gmail.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:29:10\', \'2023-06-04 22:29:10\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\User.php(80): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 22:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:29:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:29:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-04 22:30:13 --> mysqli_sql_exception: Duplicate entry '2147483647' for key 'PRIMARY' in C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\app\Controllers\Admin\User.php(80): CodeIgniter\Model->insert(Array)
+#8 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+#9 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+#10 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\...')
+#13 {main}
+CRITICAL - 2023-06-04 22:30:13 --> Duplicate entry '2147483647' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 46, \'4\', \'Quo blanditiis iure \', \'m11arcsatrioff@gmail.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:30:13\', \'2023-06-04 22:30:13\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 46, \'4\', \'Quo blanditiis iure \', \'m11arcsatrioff@gmail.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:30:13\', \'2023-06-04 22:30:13\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 46, \'4\', \'Quo blanditiis iure \', \'m11arcsatrioff@gmail.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:30:13\', \'2023-06-04 22:30:13\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\User.php(80): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 22:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-04 22:30:54 --> mysqli_sql_exception: Duplicate entry '2147483647' for key 'PRIMARY' in C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\app\Controllers\Admin\User.php(80): CodeIgniter\Model->insert(Array)
+#8 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+#9 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+#10 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\...')
+#13 {main}
+CRITICAL - 2023-06-04 22:30:54 --> Duplicate entry '2147483647' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 47, \'4\', \'Quo blanditiis iure \', \'m11arcsatrioff@gmail.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:30:54\', \'2023-06-04 22:30:54\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 47, \'4\', \'Quo blanditiis iure \', \'m11arcsatrioff@gmail.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:30:54\', \'2023-06-04 22:30:54\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2721320063\', 47, \'4\', \'Quo blanditiis iure \', \'m11arcsatrioff@gmail.com\', \'6222beae501c65eb6507b617b8000ead\', \'2023-06-04 22:30:54\', \'2023-06-04 22:30:54\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\User.php(80): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 22:30:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:31:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:31:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:31:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:31:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:31:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:39:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 22:49:35 --> Undefined array key "saldo"
+in APPPATH\Views\r_admin\dashboard.php on line 13.
+ 1 APPPATH\Views\r_admin\dashboard.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "saldo"', 'C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_admin\\dashboard.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin\Dashboard.php(37): view('r_admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 22:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:54:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:57:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:57:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:57:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 22:58:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 23:12:01 --> Undefined array key "nama_jenis_transaksi"
+in APPPATH\Views\r_operator\riwayat_transaksi_parkir.php on line 39.
+ 1 APPPATH\Views\r_operator\riwayat_transaksi_parkir.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_jenis_transaksi"', 'C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_operator\\riwayat_transaksi_parkir.php', 39)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_operator\\riwayat_transaksi_parkir.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_operator/riwayat_transaksi_parkir', [], true)
+ 5 APPPATH\Controllers\Operator\Dashboard.php(44): view('r_operator/riwayat_transaksi_parkir', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Operator\Dashboard->riwayat()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Operator\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 23:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 23:12:33 --> Undefined array key "nama_status_transaksi"
+in APPPATH\Views\r_operator\riwayat_transaksi_parkir.php on line 43.
+ 1 APPPATH\Views\r_operator\riwayat_transaksi_parkir.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_status_transaksi"', 'C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_operator\\riwayat_transaksi_parkir.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_operator\\riwayat_transaksi_parkir.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_operator/riwayat_transaksi_parkir', [], true)
+ 5 APPPATH\Controllers\Operator\Dashboard.php(44): view('r_operator/riwayat_transaksi_parkir', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Operator\Dashboard->riwayat()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Operator\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 23:13:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:13:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:16:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:17:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:17:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:17:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:17:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:17:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:18:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:19:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:20:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:20:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:22:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:23:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:25:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:25:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:26:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:27:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:28:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:29:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:30:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:30:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:30:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:30:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:31:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:31:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:32:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:32:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 23:33:47 --> Undefined variable $pager
+in APPPATH\Views\r_operator\riwayat_transaksi_parkir.php on line 41.
+ 1 APPPATH\Views\r_operator\riwayat_transaksi_parkir.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_operator\\riwayat_transaksi_parkir.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_operator\\riwayat_transaksi_parkir.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_operator/riwayat_transaksi_parkir', [], true)
+ 5 APPPATH\Controllers\Operator\Dashboard.php(44): view('r_operator/riwayat_transaksi_parkir', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Operator\Dashboard->riwayat()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Operator\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 23:34:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 23:34:25 --> syntax error, unexpected single-quoted string "pager", expecting "]"
+in APPPATH\Controllers\Operator\Dashboard.php on line 42.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Controllers\\Operator\\Dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Operator\\Dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Operator\\Dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Operator\\Dashboard', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 23:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 23:34:26 --> syntax error, unexpected single-quoted string "pager", expecting "]"
+in APPPATH\Controllers\Operator\Dashboard.php on line 42.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Controllers\\Operator\\Dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Operator\\Dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Operator\\Dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Operator\\Dashboard', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 23:34:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 23:34:58 --> syntax error, unexpected single-quoted string "pager", expecting "]"
+in APPPATH\Controllers\Operator\Dashboard.php on line 44.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Controllers\\Operator\\Dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Operator\\Dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Operator\\Dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Operator\\Dashboard', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 23:36:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 23:36:21 --> Call to a member function makeLinks() on null
+in APPPATH\Controllers\Operator\Dashboard.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Operator\Dashboard->riwayat()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Operator\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 23:36:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 23:36:24 --> Call to a member function makeLinks() on null
+in APPPATH\Controllers\Operator\Dashboard.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Operator\Dashboard->riwayat()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Operator\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 23:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 23:37:09 --> Call to a member function makeLinks() on null
+in APPPATH\Controllers\Operator\Dashboard.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Operator\Dashboard->riwayat()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Operator\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 23:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 23:37:20 --> syntax error, unexpected single-quoted string "pager", expecting "]"
+in APPPATH\Controllers\Operator\Dashboard.php on line 45.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Controllers\\Operator\\Dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Operator\\Dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Operator\\Dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Operator\\Dashboard', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 23:37:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:40:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:40:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:41:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:41:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:41:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 23:43:02 --> Undefined variable $role
+in APPPATH\Views\r_admin\userCreate.php on line 45.
+ 1 APPPATH\Views\r_admin\userCreate.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $role', 'C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_admin\\userCreate.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_admin\\userCreate.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('r_admin/userCreate', null, true)
+ 5 APPPATH\Views\r_keuangan\create.php(1): CodeIgniter\View\View->include('r_admin/userCreate')
+ 6 SYSTEMPATH\View\View.php(213): include('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_keuangan\\create.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_keuangan/create', [], true)
+ 9 APPPATH\Controllers\Keuangan\User.php(21): view('r_keuangan/create', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Keuangan\User->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 23:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 23:43:38 --> Undefined variable $role
+in APPPATH\Views\r_keuangan\create.php on line 45.
+ 1 APPPATH\Views\r_keuangan\create.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $role', 'C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_keuangan\\create.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_keuangan\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_keuangan/create', [], true)
+ 5 APPPATH\Controllers\Keuangan\User.php(21): view('r_keuangan/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Keuangan\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 23:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:43:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 23:43:42 --> Undefined variable $role
+in APPPATH\Views\r_keuangan\create.php on line 45.
+ 1 APPPATH\Views\r_keuangan\create.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $role', 'C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_keuangan\\create.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_keuangan\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_keuangan/create', [], true)
+ 5 APPPATH\Controllers\Keuangan\User.php(21): view('r_keuangan/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Keuangan\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 23:44:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-04 23:44:04 --> Undefined variable $role
+in APPPATH\Views\r_keuangan\create.php on line 45.
+ 1 APPPATH\Views\r_keuangan\create.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $role', 'C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_keuangan\\create.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\app\\Views\\r_keuangan\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_keuangan/create', [], true)
+ 5 APPPATH\Controllers\Keuangan\User.php(21): view('r_keuangan/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Keuangan\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 23:44:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:47:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-04 23:48:04 --> mysqli_sql_exception: Column 'id_role' cannot be null in C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\app\Controllers\Admin\User.php(80): CodeIgniter\Model->insert(Array)
+#8 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+#9 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+#10 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\...')
+#13 {main}
+CRITICAL - 2023-06-04 23:48:04 --> Column 'id_role' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'9021320063\', 50, NULL, \'Quo blanditiis iure \', \'marcsatrssioff@gmail.com\', \'1f3ce755d594c2837699026ecfbb4dfc\', \'2023-06-04 23:48:04\', \'2023-06-04 23:48:04\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'9021320063\', 50, NULL, \'Quo blanditiis iure \', \'marcsatrssioff@gmail.com\', \'1f3ce755d594c2837699026ecfbb4dfc\', \'2023-06-04 23:48:04\', \'2023-06-04 23:48:04\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'9021320063\', 50, NULL, \'Quo blanditiis iure \', \'marcsatrssioff@gmail.com\', \'1f3ce755d594c2837699026ecfbb4dfc\', \'2023-06-04 23:48:04\', \'2023-06-04 23:48:04\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\User.php(80): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 23:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-04 23:49:08 --> mysqli_sql_exception: Column 'id_role' cannot be null in C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\app\Controllers\Admin\User.php(80): CodeIgniter\Model->insert(Array)
+#8 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+#9 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+#10 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\...')
+#13 {main}
+CRITICAL - 2023-06-04 23:49:08 --> Column 'id_role' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'9021320063\', 51, NULL, \'Quo blanditiis iure \', \'marcsatrssioff@gmail.com\', \'1f3ce755d594c2837699026ecfbb4dfc\', \'2023-06-04 23:49:08\', \'2023-06-04 23:49:08\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'9021320063\', 51, NULL, \'Quo blanditiis iure \', \'marcsatrssioff@gmail.com\', \'1f3ce755d594c2837699026ecfbb4dfc\', \'2023-06-04 23:49:08\', \'2023-06-04 23:49:08\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'9021320063\', 51, NULL, \'Quo blanditiis iure \', \'marcsatrssioff@gmail.com\', \'1f3ce755d594c2837699026ecfbb4dfc\', \'2023-06-04 23:49:08\', \'2023-06-04 23:49:08\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\User.php(80): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 23:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-04 23:49:12 --> mysqli_sql_exception: Duplicate entry '2147483647' for key 'PRIMARY' in C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\app\Controllers\Admin\User.php(80): CodeIgniter\Model->insert(Array)
+#8 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+#9 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+#10 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\marcs\Downloads\Compressed\Project Besar_3\Project Besar\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\...')
+#13 {main}
+CRITICAL - 2023-06-04 23:49:12 --> Duplicate entry '2147483647' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'9021320063\', 52, \'4\', \'Quo blanditiis iure \', \'marcsatrssioff@gmail.com\', \'1f3ce755d594c2837699026ecfbb4dfc\', \'2023-06-04 23:49:12\', \'2023-06-04 23:49:12\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'9021320063\', 52, \'4\', \'Quo blanditiis iure \', \'marcsatrssioff@gmail.com\', \'1f3ce755d594c2837699026ecfbb4dfc\', \'2023-06-04 23:49:12\', \'2023-06-04 23:49:12\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'9021320063\', 52, \'4\', \'Quo blanditiis iure \', \'marcsatrssioff@gmail.com\', \'1f3ce755d594c2837699026ecfbb4dfc\', \'2023-06-04 23:49:12\', \'2023-06-04 23:49:12\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\User.php(80): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\marcs\\Downloads\\Compressed\\Project Besar_3\\Project Besar\\public\\index.php')
+INFO - 2023-06-04 23:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:50:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-04 23:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

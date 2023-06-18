@@ -1,0 +1,481 @@
+ERROR - 2023-06-14 20:53:01 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`db_mps`.`transaksi`, CONSTRAINT `fk_npm_references_table_user_npm` FOREIGN KEY (`npm`) REFERENCES `user` (`npm`)) in C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `us...', 0)
+#1 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(456): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\BaseModel.php(1065): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\app\Controllers\Admin\User.php(117): CodeIgniter\BaseModel->delete()
+#7 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(934): App\Controllers\Admin\User->userDelete('2021320013')
+#8 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+#9 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI...')
+#12 {main}
+CRITICAL - 2023-06-14 20:53:01 --> Cannot delete or update a parent row: a foreign key constraint fails (`db_mps`.`transaksi`, CONSTRAINT `fk_npm_references_table_user_npm` FOREIGN KEY (`npm`) REFERENCES `user` (`npm`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `user`
+WHERE `npm` = \'2021320013\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `user`
+WHERE `npm` = \'2021320013\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `user`
+WHERE `npm` = \'2021320013\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `user`
+WHERE `npm` = :npm:', [...], false)
+ 5 SYSTEMPATH\Model.php(456): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1065): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Controllers\Admin\User.php(117): CodeIgniter\BaseModel->delete()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\User->userDelete('2021320013')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI\\Downloads\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\public\\index.php')
+CRITICAL - 2023-06-14 21:49:25 --> Illegal string offset 'id_kartu'
+in APPPATH\Controllers\Admin\Transaksi.php on line 160.
+ 1 APPPATH\Controllers\Admin\Transaksi.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'id_kartu\'', 'C:\\Users\\HUAWEI\\Downloads\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\app\\Controllers\\Admin\\Transaksi.php', 160, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Transaksi->topup()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI\\Downloads\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\public\\index.php')
+CRITICAL - 2023-06-14 21:50:01 --> Illegal string offset 'id_kartu'
+in APPPATH\Controllers\Admin\Transaksi.php on line 160.
+ 1 APPPATH\Controllers\Admin\Transaksi.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'id_kartu\'', 'C:\\Users\\HUAWEI\\Downloads\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\app\\Controllers\\Admin\\Transaksi.php', 160, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Transaksi->topup()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI\\Downloads\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\public\\index.php')
+ERROR - 2023-06-14 22:24:13 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`)) in C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\app\Controllers\Keuangan\User.php(105): CodeIgniter\Model->insert(Array)
+#8 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+#9 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+#10 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI...')
+#13 {main}
+CRITICAL - 2023-06-14 22:24:13 --> Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320108\', 40, \'4\', \'AHSADASK\', \'asdksd@gmail.com\', \'3ef7ab4d6db7968b2af086ea45706e48\', \'2023-06-14 22:24:13\', \'2023-06-14 22:24:13\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320108\', 40, \'4\', \'AHSADASK\', \'asdksd@gmail.com\', \'3ef7ab4d6db7968b2af086ea45706e48\', \'2023-06-14 22:24:13\', \'2023-06-14 22:24:13\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320108\', 40, \'4\', \'AHSADASK\', \'asdksd@gmail.com\', \'3ef7ab4d6db7968b2af086ea45706e48\', \'2023-06-14 22:24:13\', \'2023-06-14 22:24:13\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Keuangan\User.php(105): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI\\Downloads\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\public\\index.php')
+ERROR - 2023-06-14 22:25:05 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`)) in C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\app\Controllers\Keuangan\User.php(105): CodeIgniter\Model->insert(Array)
+#8 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+#9 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+#10 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI...')
+#13 {main}
+CRITICAL - 2023-06-14 22:25:05 --> Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320108\', 41, \'4\', \'Fadhilah\', \'iznmdhil@gmail.com\', \'3ef7ab4d6db7968b2af086ea45706e48\', \'2023-06-14 22:25:05\', \'2023-06-14 22:25:05\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320108\', 41, \'4\', \'Fadhilah\', \'iznmdhil@gmail.com\', \'3ef7ab4d6db7968b2af086ea45706e48\', \'2023-06-14 22:25:05\', \'2023-06-14 22:25:05\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320108\', 41, \'4\', \'Fadhilah\', \'iznmdhil@gmail.com\', \'3ef7ab4d6db7968b2af086ea45706e48\', \'2023-06-14 22:25:05\', \'2023-06-14 22:25:05\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Keuangan\User.php(105): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI\\Downloads\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\public\\index.php')
+ERROR - 2023-06-14 22:26:01 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`)) in C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\app\Controllers\Keuangan\User.php(105): CodeIgniter\Model->insert(Array)
+#8 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+#9 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+#10 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI...')
+#13 {main}
+CRITICAL - 2023-06-14 22:26:01 --> Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 42, \'4\', \'ADNIKA ANJING\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:26:01\', \'2023-06-14 22:26:01\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 42, \'4\', \'ADNIKA ANJING\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:26:01\', \'2023-06-14 22:26:01\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 42, \'4\', \'ADNIKA ANJING\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:26:01\', \'2023-06-14 22:26:01\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Keuangan\User.php(105): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI\\Downloads\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\public\\index.php')
+INFO - 2023-06-14 22:26:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-14 22:26:22 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`)) in C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\app\Controllers\Keuangan\User.php(105): CodeIgniter\Model->insert(Array)
+#8 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+#9 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+#10 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI...')
+#13 {main}
+CRITICAL - 2023-06-14 22:26:22 --> Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 43, \'4\', \'ADNIKA ANJING\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:26:22\', \'2023-06-14 22:26:22\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 43, \'4\', \'ADNIKA ANJING\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:26:22\', \'2023-06-14 22:26:22\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 43, \'4\', \'ADNIKA ANJING\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:26:22\', \'2023-06-14 22:26:22\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Keuangan\User.php(105): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI\\Downloads\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\public\\index.php')
+INFO - 2023-06-14 22:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:27:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:27:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-14 22:29:04 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`)) in C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\app\Controllers\Keuangan\User.php(105): CodeIgniter\Model->insert(Array)
+#8 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+#9 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+#10 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI...')
+#13 {main}
+CRITICAL - 2023-06-14 22:29:04 --> Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 44, \'4\', \'Adnikakakakak\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:29:04\', \'2023-06-14 22:29:04\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 44, \'4\', \'Adnikakakakak\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:29:04\', \'2023-06-14 22:29:04\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 44, \'4\', \'Adnikakakakak\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:29:04\', \'2023-06-14 22:29:04\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Keuangan\User.php(105): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI\\Downloads\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\public\\index.php')
+INFO - 2023-06-14 22:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-14 22:29:20 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`)) in C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\app\Controllers\Keuangan\User.php(105): CodeIgniter\Model->insert(Array)
+#8 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+#9 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+#10 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI...')
+#13 {main}
+CRITICAL - 2023-06-14 22:29:20 --> Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 45, \'4\', \'Adnikakakakak\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:29:20\', \'2023-06-14 22:29:20\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 45, \'4\', \'Adnikakakakak\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:29:20\', \'2023-06-14 22:29:20\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 45, \'4\', \'Adnikakakakak\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:29:20\', \'2023-06-14 22:29:20\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Keuangan\User.php(105): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI\\Downloads\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\public\\index.php')
+INFO - 2023-06-14 22:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:34:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-14 22:34:25 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`)) in C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\app\Controllers\Keuangan\User.php(106): CodeIgniter\Model->insert(Array)
+#8 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+#9 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+#10 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI...')
+#13 {main}
+CRITICAL - 2023-06-14 22:34:25 --> Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 46, \'4\', \'andika\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:34:25\', \'2023-06-14 22:34:25\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 46, \'4\', \'andika\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:34:25\', \'2023-06-14 22:34:25\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 46, \'4\', \'andika\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:34:25\', \'2023-06-14 22:34:25\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Keuangan\User.php(106): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI\\Downloads\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\public\\index.php')
+INFO - 2023-06-14 22:35:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-14 22:35:33 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`)) in C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\app\Controllers\Keuangan\User.php(106): CodeIgniter\Model->insert(Array)
+#8 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+#9 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+#10 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI...')
+#13 {main}
+CRITICAL - 2023-06-14 22:35:33 --> Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 47, \'4\', \'andika\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:35:33\', \'2023-06-14 22:35:33\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 47, \'4\', \'andika\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:35:33\', \'2023-06-14 22:35:33\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 47, \'4\', \'andika\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:35:33\', \'2023-06-14 22:35:33\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Keuangan\User.php(106): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI\\Downloads\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\public\\index.php')
+INFO - 2023-06-14 22:35:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:35:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-14 22:35:40 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`)) in C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\app\Controllers\Keuangan\User.php(106): CodeIgniter\Model->insert(Array)
+#8 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+#9 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+#10 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\HUAWEI\Downloads\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI...')
+#13 {main}
+CRITICAL - 2023-06-14 22:35:40 --> Cannot add or update a child row: a foreign key constraint fails (`db_mps`.`user`, CONSTRAINT `id_status_reference_table_status` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 48, \'4\', \'andika\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:35:40\', \'2023-06-14 22:35:40\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 48, \'4\', \'andika\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:35:40\', \'2023-06-14 22:35:40\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (\'2021320107\', 48, \'4\', \'andika\', \'iznmdhil@gmail.com\', \'f7c0d0d614aa3559d23f88fdfe686219\', \'2023-06-14 22:35:40\', \'2023-06-14 22:35:40\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`npm`, `id_kartu`, `id_role`, `nama`, `email`, `password`, `created_at`, `updated_at`) VALUES (:npm:, :id_kartu:, :id_role:, :nama:, :email:, :password:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Keuangan\User.php(106): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Keuangan\User->userInsert()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keuangan\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\HUAWEI\\Downloads\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\ParkingManagementSystem-codespace-mrcsatrio-verbose-waddle-44v5w6j97xj3g54\\public\\index.php')
+INFO - 2023-06-14 22:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:37:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:37:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:37:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:37:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:37:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:37:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:37:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:37:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:37:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:38:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:38:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:39:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:39:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:39:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:39:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:39:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:39:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:40:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:40:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:40:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:40:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:43:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:44:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:46:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:46:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:46:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:46:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:46:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:50:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:50:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:51:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:54:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:54:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:57:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:58:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:58:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:58:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:59:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 22:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
