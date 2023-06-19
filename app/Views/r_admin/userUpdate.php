@@ -34,7 +34,7 @@
         <div class="form-group row">
             <label class="col-sm-3 col-form-label">Nomor Kartu</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" name="nomor_kartu" value="<?= $user['nomor_kartu'] ?>">
+                <input type="text" class="form-control" name="nomor_kartu" value="<?= $user['nomor_kartu'] ?>" onkeydown="return event.key !== 'Enter';">
             </div>
         </div>
         <div class="form-group row">

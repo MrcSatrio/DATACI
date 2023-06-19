@@ -8,7 +8,7 @@ $this->section('page_content'); ?>
         <?php echo session()->getFlashdata('berhasil'); ?>
     </div>
 <?php endif; ?>
-<div class="card mx-5 shadow">
+<div class="card mx-2 shadow">
     <div class="card-header">
         Users List
     </div>
@@ -80,7 +80,6 @@ $this->section('page_content'); ?>
                                     </button>
                                     <div class="dropdown-menu shadow">
                                         <a class="dropdown-item" href="<?= base_url(); ?>admin/delete/<?= $u['npm']; ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
-
                                     </div>
                                 </div>
                             </td>

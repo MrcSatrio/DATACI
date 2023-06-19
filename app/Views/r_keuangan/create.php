@@ -52,7 +52,7 @@ $this->section('page_content'); ?>
                     </div>
                     <label class="col-sm-3 col-form-label">Input Kartu Parkir</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-user" name="nomor_kartu" placeholder="Scan / masukan nomor manual"><br>
+                        <input type="text" class="form-control form-control-user" name="nomor_kartu" placeholder="Scan / masukan nomor manual" onkeydown="return event.key !== 'Enter';"><br>
                     </div>
                     <div class="col-sm-12 mt-5 text-right">
                         <button type="submit" class="btn btn-primary col-sm-3">Buat Akun</button>
