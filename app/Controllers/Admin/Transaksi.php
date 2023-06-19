@@ -270,15 +270,7 @@ class Transaksi extends BaseController
     }
 
     // Generate kode booking secara acak dengan panjang 6 karakter
-    $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $numbers = '0123456789';
-
-    $booking_code = '';
-    for ($i = 0; $i < 6; $i++) {
-        $booking_code .= $chars[mt_rand(0, strlen($chars) - 1)];
-        $booking_code .= $numbers[mt_rand(0, strlen($numbers) - 1)];
-    }
-
+    $kodebooking_transaksi = substr(str_shuffle(str_repeat("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", 6)), 0, 6);
     // Tambahkan operasi penjumlahan antara saldo awal dan nominal
     $saldoakhir_transaksi = $nominal_transaksi + $saldoawal_transaksi;
 
@@ -288,7 +280,7 @@ class Transaksi extends BaseController
 
     // Simpan data booking ke dalam database
     $this->transaksiModel->save([
-        'kodebooking_transaksi' => $booking_code,
+        'kodebooking_transaksi' =>  $kodebooking_transaksi,
         'npm' => $user['npm'],
         'id_jenis_transaksi' => $idjenis,
         'saldoawal_transaksi' => $saldoawal_transaksi,
@@ -303,7 +295,7 @@ class Transaksi extends BaseController
     ]);
 
     // Perpindahan ke fungsi transaksi_result untuk menampilkan kodebooking dan nominal
-    return redirect()->to("user/transaksi_result/$booking_code/$total_harga/$id_jenis_pembayaran");
+    return redirect()->to("user/transaksi_result/ $kodebooking_transaksi/$total_harga/$id_jenis_pembayaran");
 }
 
     
@@ -378,6 +370,13 @@ class Transaksi extends BaseController
     public function bukti($id_transaksi)
     {
         $data = $this->request->getFile('bukti_pembayaran');
+        
+        // Validasi ukuran file
+        if ($data->getSize() > 4 * 1024 * 1024) {
+            session()->setFlashdata('error', 'Ukuran file melebihi batas maksimum (4MB).');
+            return redirect()->back()->withInput();
+        }
+    
         $fileName = date('YmdHis') . '_' . $data->getRandomName();
         $uploadDir = 'uploads/bukti/';
     
@@ -394,6 +393,7 @@ class Transaksi extends BaseController
         session()->setFlashdata('success', 'Bukti Berhasil diupload.');
         return redirect()->back()->withInput();
     }
+    
     public function cetak($id_transaksi)
     {
         $transaksi = $this->transaksiModel
@@ -404,22 +404,27 @@ class Transaksi extends BaseController
             ->where('id_transaksi', $id_transaksi)
             ->first();
     
-        $harga = $this->hargaModel->where('nama_harga', 'kartu_hilang')->first();
-        $total_harga = $transaksi['nominal_transaksi'] + $harga['nominal'];
-    
         $data = [
             'title' => 'Parking Management System',
             'user' => $this->userModel
                 ->join('role', 'role.id_role = user.id_role')
                 ->where('npm', session('npm'))
                 ->first(),
-            'transaksi' => $transaksi,
-            'harga' => $total_harga
+            'transaksi' => $transaksi
         ];
+    
+        // Cek apakah id_jenis_transaksi = 2
+        if ($transaksi['id_jenis_transaksi'] == 2) {
+            $harga = $this->hargaModel->where('nama_harga', 'kartu_hilang')->first();
+            $total_harga = $transaksi['nominal_transaksi'] + $harga['nominal'];
+            $data['harga'] = $total_harga;
+        } else if ($transaksi['id_jenis_transaksi'] == 1) {
+            $data['harga'] = $transaksi['nominal_transaksi'];
+        }
     
         // Menampilkan hasil data booking code dan nominal saldo ke form transaksi_formResult
         return view('r_keuangan/cetak', $data);
-    }
+    }    
     
     
 }    

@@ -1,6 +1,6 @@
 <?= $this->extend('template/index'); ?>
 
-<?php $this->section('page_content'); ?>
+<?= $this->section('page_content'); ?>
 
 <?php if (!empty(session()->getFlashdata('error'))) : ?>
     <div class="alert alert-danger" role="alert">
@@ -66,7 +66,7 @@
                                             <span class="badge badge-warning"><?= $tr['nama_jenis_transaksi']; ?></span>
                                         <?php elseif ($tr['id_jenis_transaksi'] == 3) : ?>
                                             <span class="badge badge-success"><?= $tr['nama_jenis_transaksi']; ?></span>
-                                        <?php endif ?>
+                                        <?php endif; ?>
                                     </td>
                                     <td><?= 'Rp ' . number_format($tr['nominal_transaksi']); ?></td>
                                     <td>
@@ -78,19 +78,20 @@
                                             <span class="badge badge-success"><?= $tr['nama_status_transaksi']; ?></span>
                                         <?php elseif ($tr['id_status_transaksi'] == 4) : ?>
                                             <span class="badge badge-danger"><?= $tr['nama_status_transaksi']; ?></span>
-                                        <?php endif ?>
+                                        <?php endif; ?>
                                     </td>
                                     <td>
                                         <?php if ($tr['id_jenis_pembayaran'] == 1) : ?>
                                             <span class="badge badge-primary"><?= $tr['nama_jenis_pembayaran']; ?></span>
                                         <?php elseif ($tr['id_jenis_pembayaran'] == 2) : ?>
                                             <span class="badge badge-secondary"><?= $tr['nama_jenis_pembayaran']; ?></span>
-                                        <?php endif ?>
+                                        <?php endif; ?>
                                     </td>
                                     <td>
-                                        <?php if ($tr['id_jenis_pembayaran'] == 2 && $tr['id_status_transaksi'] != 4): ?>
-                                            <button type="button" class="btn btn-primary" style="padding: 5px 5px;" onclick="openImageInNewTab('<?= base_url('uploads/bukti/' . $tr['bukti_pembayaran']); ?>')">Lihat Bukti</button>
-                                        <?php endif; ?>
+<?php if ($tr['id_jenis_pembayaran'] == 2 && $tr['id_status_transaksi'] != 4 && !empty($tr['bukti_pembayaran'])) : ?>
+    <a target="_blank" href="<?= base_url('uploads/bukti/' . $tr['bukti_pembayaran']); ?>" class="btn btn-primary" style="padding: 5px 5px;">Lihat Bukti</a>
+<?php endif; ?>
+
                                     </td>
                                     <td><?= $tr['updated_at']; ?></td>
                                     <td>

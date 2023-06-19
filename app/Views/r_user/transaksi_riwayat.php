@@ -88,12 +88,9 @@
 </td>
 <td><?= $tr['updated_at']; ?></td>
 <td>
-<?php if ($tr['id_status_transaksi'] == 1 && $tr['id_jenis_pembayaran'] == 2): ?>
+<?php if ($tr['id_status_transaksi'] == 1 && $tr['id_jenis_pembayaran'] == 2 && empty($tr['bukti_pembayaran'])) : ?>
     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#uploadModal">Upload Bukti</button>
 <?php endif; ?>
-
-
-
     <!-- Modal -->
     <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -108,7 +105,8 @@
                     <form method="POST" action="<?= base_url(); ?>user/bukti/<?= $tr['id_transaksi']; ?>" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="bukti_pembayaran">Pilih File Bukti Pembayaran:</label>
-                            <input type="file" class="form-control-file" id="bukti_pembayaran" name="bukti_pembayaran" accept=".jpg, .jpeg, .png" required>
+                            <input type="file" class="form-control-file" id="bukti_pembayaran" name="bukti_pembayaran" accept=".jpg, .jpeg, .png" required maxFileSize="4194304">
+
                         </div>
                 </div>
                 <div class="modal-footer">

@@ -43,6 +43,7 @@ class Dashboard extends BaseController
                 ->join('user', 'user.npm = transaksi.npm')
                 ->join('jenis_transaksi', 'jenis_transaksi.id_jenis_transaksi = transaksi.id_jenis_transaksi')
                 ->join('status_transaksi', 'status_transaksi.id_status_transaksi = transaksi.id_status_transaksi')
+                
                 ->where('transaksi.npm', session('npm'))
                 ->findAll(),
             'role' => $this->roleModel->findAll(),
