@@ -89,7 +89,9 @@ class User extends BaseController
                 'id_status' => $this->request->getVar('id_status'),
                 'nama' => $this->request->getVar('nama'),
                 'email' => $this->request->getVar('email'),
-                'password' => md5($password)
+                'password' => md5($password),
+                'id_status'  => $this->request->getVar('id_status'),
+                'masa_berlaku'=> $this->request->getVar('masa_berlaku'),
             ];
         $this->userModel->insert($datauser);
 

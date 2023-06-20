@@ -43,13 +43,7 @@ $this->section('page_content'); ?>
                             <option value="50000">Rp.50.000</option>
                         </select><br><br>
                     </div>
-                    <label class="col-sm-3 col-form-label">Status</label>
-                    <div class="col-sm-9">
-                        <select name="id_status" class="custom-select form-control" id="" required>
-                            <option value="1">E-Biu</option>
-                            <!-- <option value="2">Member</option> -->
-                        </select><br><br>
-                    </div>
+                        <input type="hidden" name="id_status" class="custom-select form-control" id="" value="1">
                     <label class="col-sm-3 col-form-label">Input Kartu Parkir</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control form-control-user" name="nomor_kartu" placeholder="Scan / masukan nomor manual" onkeydown="return event.key !== 'Enter';"><br>
