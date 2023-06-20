@@ -11,8 +11,7 @@ class TransaksiModel extends Model
 
     protected $useTimestamps = true;
 
-    protected $allowedFields =
-    [
+    protected $allowedFields = [
         'id_transaksi',
         'kodebooking_transaksi',
         'npm',
@@ -27,7 +26,7 @@ class TransaksiModel extends Model
         'updated_at'
     ];
 
-    public function searchTransaksi($keyword, $startDate, $endDate)
+    public function searchTransaksi($keyword, $startDate, $endDate, $id_status_transaksi)
     {
         $query = $this->select('transaksi.*, user.nama')
             ->join('user', 'user.npm = transaksi.npm')
@@ -47,6 +46,10 @@ class TransaksiModel extends Model
                 ->where('transaksi.created_at <=', $endDate . ' 23:59:59');
         }
 
-        return $query->findAll();
+        if (!empty($id_status_transaksi)) {
+            $query->where('transaksi.id_status_transaksi', $id_status_transaksi);
+        }
+
+        return $query->get()->getResultArray();
     }
 }

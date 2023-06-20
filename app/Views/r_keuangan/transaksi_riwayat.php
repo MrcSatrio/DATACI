@@ -14,23 +14,32 @@
             <div class="card-header">
                 Riwayat Transaksi
                 <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100" action="<?= base_url() ?><?= $user['nama_role']; ?>/search" method="POST">
-                    <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small" placeholder="Keyword" name="keyword">
-                        <div class="form-group">
-                            <label for="start_date">Tanggal Mulai:</label>
-                            <input type="date" name="start_date" id="start_date" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="end_date">Tanggal Akhir:</label>
-                            <input type="date" name="end_date" id="end_date" class="form-control">
-                        </div>
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="submit">
-                                <i class="fas fa-search fa-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
+    <div class="input-group">
+        <input type="text" class="form-control bg-light border-0 small" placeholder="Keyword" name="keyword">
+        <div class="form-group">
+            <label for="start_date"> Tanggal Mulai: </label>
+            <input type="date" name="start_date" id="start_date" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="end_date"> Tanggal Akhir: </label>
+            <input type="date" name="end_date" id="end_date" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="jenis_transaksi"> Status Transaksi: </label>
+            <select name="id_status_transaksi" id="id_status_transaksi" class="form-control">
+                <option value="3">Approved</option>
+                <option value="1">Pending</option>
+                <option value="4">Cancel</option>
+            </select>
+        </div>
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit">
+                <i class="fas fa-search fa-sm"></i>
+            </button>
+        </div>
+    </div>
+</form>
+
             </div>
             <div class="card-body">
                 <div class="table-responsive-lg">

@@ -8,30 +8,44 @@
 <!-- Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+<?php if (!empty(session()->getFlashdata('error'))) : ?>
+    <div class="alert alert-danger" role="alert">
+        <?= session()->getFlashdata('error'); ?>
+    </div>
+<?php endif; ?>
 <div class="row justify-content-center">
     <div class="col">
         <div class="card shadow mx-2">
             <div class="card-header">
                 Riwayat Transaksi
-                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100" action="<?= base_url() ?>keuangan/search" method="POST">
-                    <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small" placeholder="Keyword" name="keyword">
-                        <div class="form-group">
-                            <label for="start_date">Tanggal Mulai:</label>
-                            <input type="date" name="start_date" id="start_date" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="end_date">Tanggal Akhir:</label>
-                            <input type="date" name="end_date" id="end_date" class="form-control">
-                        </div>
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="submit">
-                                <i class="fas fa-search fa-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
+                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100" action="<?= base_url() ?><?= $user['nama_role']; ?>/search" method="POST">
+    <div class="input-group">
+        <input type="text" class="form-control bg-light border-0 small" placeholder="Keyword" name="keyword">
+        <div class="form-group">
+            <label for="start_date"> Tanggal Mulai: </label>
+            <input type="date" name="start_date" id="start_date" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="end_date"> Tanggal Akhir: </label>
+            <input type="date" name="end_date" id="end_date" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="jenis_transaksi"> Status Transaksi: </label>
+            <select name="id_status_transaksi" id="id_status_transaksi" class="form-control">
+                <option value="3">Approved</option>
+                <option value="1">Pending</option>
+                <option value="4">Cancel</option>
+            </select>
+        </div>
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit">
+                <i class="fas fa-search fa-sm"></i>
+            </button>
+        </div>
+    </div>
+</form>
                 <button class="btn btn-primary" onclick="printPage()">Cetak</button>
+                <button class="btn btn-primary" onclick="window.location.href='<?= base_url(); ?>keuangan/transaksi_riwayat'">Kembali</button>
             </div>
             <div class="card-body">
                 <div class="table-responsive-lg">
@@ -73,9 +87,9 @@
                                     <?php if ($tr['id_status_transaksi'] == 1) : ?>
                                         <span class="badge badge-warning">Pending</span>
                                     <?php elseif ($tr['id_status_transaksi'] == 2) : ?>
-                                        <span class="badge badge-success">Approved</span>
-                                    <?php elseif ($tr['id_status_transaksi'] == 3) : ?>
                                         <span class="badge badge-success">Complete</span>
+                                    <?php elseif ($tr['id_status_transaksi'] == 3) : ?>
+                                        <span class="badge badge-success">Approved</span>
                                     <?php elseif ($tr['id_status_transaksi'] == 4) : ?>
                                         <span class="badge badge-danger">Cancel</span>
                                     <?php endif ?>
