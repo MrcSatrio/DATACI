@@ -49,6 +49,7 @@
                                 <th>#</th>
                                 <th>Kode Booking</th>
                                 <th>NIM</th>
+                                <th>Nama</th>
                                 <th>Jenis Transaksi</th>
                                 <th>Nominal Transaksi</th>
                                 <th>Status</th>
@@ -68,6 +69,7 @@
                                     <td><?= $i++; ?></td>
                                     <td><?= $tr['kodebooking_transaksi']; ?></td>
                                     <td><?= $tr['npm']; ?></td>
+                                    <td><?= $tr['nama']; ?></td>
                                     <td>
                                         <?php if ($tr['id_jenis_transaksi'] == 1) : ?>
                                             <span class="badge badge-info"><?= $tr['nama_jenis_transaksi']; ?></span>

@@ -272,18 +272,20 @@ class Transaksi extends BaseController
             ->where('npm', session('npm'))
             ->first(),
         'transaksi' => $this->transaksiModel
+            ->join('user', 'user.npm = transaksi.npm')
             ->join('jenis_transaksi', 'jenis_transaksi.id_jenis_transaksi = transaksi.id_jenis_transaksi')
             ->join('status_transaksi', 'status_transaksi.id_status_transaksi = transaksi.id_status_transaksi')
             ->join('jenis_pembayaran', 'jenis_pembayaran.id_jenis_pembayaran = transaksi.id_jenis_pembayaran')
             ->whereIn('transaksi.id_jenis_transaksi', [1, 2]) // Menggunakan whereIn untuk mencari id_jenis_transaksi 1 atau 2
-            ->orderBy('updated_at', 'DESC')
-            ->paginate($limit, 'pagination'),
+            ->orderBy('transaksi.updated_at', 'DESC') // Menentukan kolom updated_at secara spesifik
+            ->paginate($limit, 'transaksi_pagination'),
         'pager' => $this->transaksiModel
+            ->join('user', 'user.npm = transaksi.npm')
             ->join('jenis_transaksi', 'jenis_transaksi.id_jenis_transaksi = transaksi.id_jenis_transaksi')
             ->join('status_transaksi', 'status_transaksi.id_status_transaksi = transaksi.id_status_transaksi')
             ->join('jenis_pembayaran', 'jenis_pembayaran.id_jenis_pembayaran = transaksi.id_jenis_pembayaran')
             ->whereIn('transaksi.id_jenis_transaksi', [1, 2]) // Menggunakan whereIn untuk mencari id_jenis_transaksi 1 atau 2
-            ->orderBy('created_at', 'DESC')
+            ->orderBy('transaksi.created_at', 'DESC') // Menentukan kolom created_at secara spesifik
             ->pager,
         'currentPage' => $currentPage,
         'limit' => $limit,
