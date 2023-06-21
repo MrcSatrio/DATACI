@@ -22,7 +22,7 @@ class CheckOut extends BaseController
             'errors' => [
                 'required' => 'Nomor Kartu tidak boleh kosong',
                 'numeric' => 'Nomor Kartu harus berupa angka',
-                'is_not_unique' => 'Kartu Tidak Ada Di Database',
+                'is_not_unique' => 'Kartu Tidak Terdaftar',
             ]
         ]
     ];
@@ -49,7 +49,7 @@ class CheckOut extends BaseController
                 'id_kartu' => $user_parking['id_kartu'],
                 'saldo' => $user_parking['saldo'] - $nominal_transaksi
             ]);
-            session()->setFlashdata('success', 'Transaksi Berhasil Silahkan Buka Boom Gate');
+            session()->setFlashdata('success', 'Transaksi Berhasil, Silahkan Buka Portal');
             return redirect()->back()->withInput();
         }
     } elseif ($user_parking['id_status'] == 2) {
@@ -75,11 +75,11 @@ class CheckOut extends BaseController
                     'id_kartu' => $user_parking['id_kartu'],
                     'saldo' => $user_parking['saldo'] - $nominal_transaksi
                 ]);
-                session()->setFlashdata('success', 'Transaksi Berhasil Silahkan Buka Boom Gate');
+                session()->setFlashdata('success', 'Transaksi Berhasil, Silahkan Buka Portal');
                 return redirect()->back()->withInput();
             }
         } else {
-            session()->setFlashdata('error', 'Kartu Member');
+            session()->setFlashdata('error', 'Ini Kartu Member');
             return redirect()->back()->withInput();
         }
     }
