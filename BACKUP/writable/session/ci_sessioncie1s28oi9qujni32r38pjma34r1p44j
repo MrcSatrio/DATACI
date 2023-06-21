@@ -1,8 +1,0 @@
-__ci_last_regenerate|i:1686644912;error|s:202:"	<div class="errors" role="alert">
-		<ul>
-					<li>Token tidak boleh kosong</li>
-					<li>Password tidak boleh kosong</li>
-					<li>Konfirmasi password tidak sama dengan password</li>
-				</ul>
-	</div>
-";__ci_vars|a:3:{s:5:"error";s:3:"new";s:13:"_ci_old_input";s:3:"new";s:21:"_ci_validation_errors";s:3:"new";}_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:0:{}}_ci_validation_errors|a:3:{s:5:"token";s:24:"Token tidak boleh kosong";s:8:"password";s:27:"Password tidak boleh kosong";s:15:"confirmpassword";s:46:"Konfirmasi password tidak sama dengan password";}

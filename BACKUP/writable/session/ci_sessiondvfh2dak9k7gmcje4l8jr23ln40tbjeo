@@ -1,6 +1,0 @@
-__ci_last_regenerate|i:1686713300;_ci_previous_url|s:76:"http://52.14.196.50/ParkingManagementSystem/admin/transaksi_inputkodebooking";npm|s:1:"1";nama|s:10:"Admin Root";id_role|s:1:"1";error|s:87:"	<div class="errors" role="alert">
-		<ul>
-					<li>Harus Di Isi</li>
-				</ul>
-	</div>
-";__ci_vars|a:3:{s:5:"error";s:3:"old";s:13:"_ci_old_input";s:3:"old";s:21:"_ci_validation_errors";s:3:"old";}_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:2:{s:21:"kodebooking_transaksi";s:6:"N5H8T3";s:8:"honeypot";s:0:"";}}_ci_validation_errors|a:1:{s:11:"nomor_kartu";s:12:"Harus Di Isi";}
