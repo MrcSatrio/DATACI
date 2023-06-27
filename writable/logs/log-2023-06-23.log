@@ -1,0 +1,20 @@
+CRITICAL - 2023-06-23 09:26:11 --> Undefined variable $u
+in APPPATH\Views\r_user\transaksi_riwayat.php on line 117.
+ 1 APPPATH\Views\r_user\transaksi_riwayat.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $u', 'C:\\xampp\\htdocs\\DATACI\\app\\Views\\r_user\\transaksi_riwayat.php', 117)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\DATACI\\app\\Views\\r_user\\transaksi_riwayat.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_user/transaksi_riwayat', [], true)
+ 5 APPPATH\Controllers\User\Riwayat.php(45): view('r_user/transaksi_riwayat', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User\Riwayat->riwayat()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Riwayat))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-23 09:31:18 --> syntax error, unexpected token "endforeach", expecting "elseif" or "else" or "endif"
+in APPPATH\Views\r_user\transaksi_riwayat.php on line 151.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_user/transaksi_riwayat', [], true)
+ 3 APPPATH\Controllers\User\Riwayat.php(45): view('r_user/transaksi_riwayat', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User\Riwayat->riwayat()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Riwayat))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
