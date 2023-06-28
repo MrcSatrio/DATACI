@@ -1,7 +1,19 @@
 <?= $this->extend('template/index'); ?>
 
 <?= $this->section('page_content'); ?>
-
+<div class="card mx-2 shadow">
+    <div class="card-header">
+        Users List
+        <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100" action="<?= base_url() ?>admin/search_user" method="POST">
+    <div class="input-group">
+        <input type="text" class="form-control bg-light border-0 small" placeholder="NPM" name="keyword">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit">
+                <i class="fas fa-search fa-sm"></i>
+            </button>
+        </div>
+</form>
+    </div>
 <div class="row justify-content-center">
     <div class="col">
         <div class="card shadow mx-2 mb-3">
