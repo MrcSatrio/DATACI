@@ -125,7 +125,7 @@ class User extends BaseController
     {
         $this->userModel->where('npm', $npm)->delete();
         $session = session();
-        session()->setFlashdata('hapus', '<br>');
+        session()->setFlashdata('hapus', 'Data Berhasil DIhapus');
         return redirect()->to(base_url('admin/read'));
     }
     public function userUpdate($npm)

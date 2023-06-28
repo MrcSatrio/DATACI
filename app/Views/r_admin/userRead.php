@@ -1,16 +1,38 @@
 <?= $this->extend('template/index');
 
 $this->section('page_content'); ?>
-<?php if (!empty(session()->getFlashdata('berhasil'))) : ?>
-    <div class="alert alert-success" role="success">
+<?php if (session()->getFlashdata('berhasil')) : ?>
+    <div class="alert alert-success" role="alert">
         <h4>Data Berhasil Diubah</h4>
-        </hr>
+        <hr>
         <?php echo session()->getFlashdata('berhasil'); ?>
     </div>
 <?php endif; ?>
+<?php if (session()->getFlashdata('error')) : ?>
+    <div class="alert alert-danger" role="alert">
+        <hr>
+        <?php echo session()->getFlashdata('error'); ?>
+    </div>
+<?php endif; ?>
+<?php if (session()->getFlashdata('hapus')) : ?>
+    <div class="alert alert-danger" role="alert">
+        <hr>
+        <?php echo session()->getFlashdata('hapus'); ?>
+    </div>
+<?php endif; ?>
+
 <div class="card mx-2 shadow">
     <div class="card-header">
         Users List
+        <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100" action="<?= base_url() ?>admin/search_user" method="POST">
+    <div class="input-group">
+        <input type="text" class="form-control bg-light border-0 small" placeholder="NPM" name="keyword">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit">
+                <i class="fas fa-search fa-sm"></i>
+            </button>
+        </div>
+</form>
     </div>
     <div class="card-body">
         <div class="table-responsive-lg">
@@ -26,7 +48,6 @@ $this->section('page_content'); ?>
                         <th>Masa Berlaku</th>
                         <th>Saldo</th>
                         <th>Role</th>
-                        <!-- <th>Tipe Kartu</th> -->
                         <th>Action</th>
                     </tr>
                 </thead>

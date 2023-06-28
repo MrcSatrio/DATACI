@@ -1,0 +1,235 @@
+INFO - 2023-06-28 23:29:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:33:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:34:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:37:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-28 23:37:18 --> mysqli_sql_exception: Not unique table/alias: 'user' in C:\xampp\htdocs\DATACI\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\DATACI\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\DATACI\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\DATACI\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\DATACI\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\DATACI\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\DATACI\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\DATACI\app\Controllers\Admin\Search_user.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\DATACI\system\CodeIgniter.php(934): App\Controllers\Admin\Search_user->index()
+#8 C:\xampp\htdocs\DATACI\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Search_user))
+#9 C:\xampp\htdocs\DATACI\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ParkingManagementSystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-06-28 23:37:18 --> Not unique table/alias: 'user'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `user`
+JOIN `user` ON `user`.`npm` = `transaksi`.`npm`
+JOIN `kartu` ON `kartu`.`id_kartu` = `user`.`id_kartu`
+JOIN `role` ON `role`.`id_role` = `user`.`id_role`
+WHERE `npm` = \'1\'
+AND   (
+`user`.`npm` LIKE \'%2021320004%\' ESCAPE \'!\'
+OR  `transaksi`.`kodebooking_transaksi` LIKE \'%2021320004%\' ESCAPE \'!\'
+OR  `kartu`.`nomor_kartu` LIKE \'%2021320004%\' ESCAPE \'!\'
+OR  `user`.`nama` LIKE \'%2021320004%\' ESCAPE \'!\'
+ )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `user` ON `user`.`npm` = `transaksi`.`npm`
+JOIN `kartu` ON `kartu`.`id_kartu` = `user`.`id_kartu`
+JOIN `role` ON `role`.`id_role` = `user`.`id_role`
+WHERE `npm` = \'1\'
+AND   (
+`user`.`npm` LIKE \'%2021320004%\' ESCAPE \'!\'
+OR  `transaksi`.`kodebooking_transaksi` LIKE \'%2021320004%\' ESCAPE \'!\'
+OR  `kartu`.`nomor_kartu` LIKE \'%2021320004%\' ESCAPE \'!\'
+OR  `user`.`nama` LIKE \'%2021320004%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `user` ON `user`.`npm` = `transaksi`.`npm`
+JOIN `kartu` ON `kartu`.`id_kartu` = `user`.`id_kartu`
+JOIN `role` ON `role`.`id_role` = `user`.`id_role`
+WHERE `npm` = \'1\'
+AND   (
+`user`.`npm` LIKE \'%2021320004%\' ESCAPE \'!\'
+OR  `transaksi`.`kodebooking_transaksi` LIKE \'%2021320004%\' ESCAPE \'!\'
+OR  `kartu`.`nomor_kartu` LIKE \'%2021320004%\' ESCAPE \'!\'
+OR  `user`.`nama` LIKE \'%2021320004%\' ESCAPE \'!\'
+ )')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `user` ON `user`.`npm` = `transaksi`.`npm`
+JOIN `kartu` ON `kartu`.`id_kartu` = `user`.`id_kartu`
+JOIN `role` ON `role`.`id_role` = `user`.`id_role`
+WHERE `npm` = :npm:
+AND   (
+`user`.`npm` LIKE :user.npm: ESCAPE \'!\'
+OR  `transaksi`.`kodebooking_transaksi` LIKE :transaksi.kodebooking_transaksi: ESCAPE \'!\'
+OR  `kartu`.`nomor_kartu` LIKE :kartu.nomor_kartu: ESCAPE \'!\'
+OR  `user`.`nama` LIKE :user.nama: ESCAPE \'!\'
+ )', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\Search_user.php(26): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Search_user->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Search_user))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-28 23:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-28 23:38:13 --> mysqli_sql_exception: Not unique table/alias: 'user' in C:\xampp\htdocs\DATACI\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\DATACI\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\DATACI\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\DATACI\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\DATACI\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\DATACI\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\DATACI\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\DATACI\app\Controllers\Admin\Search_user.php(25): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\DATACI\system\CodeIgniter.php(934): App\Controllers\Admin\Search_user->index()
+#8 C:\xampp\htdocs\DATACI\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Search_user))
+#9 C:\xampp\htdocs\DATACI\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ParkingManagementSystem\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-06-28 23:38:13 --> Not unique table/alias: 'user'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `user`
+JOIN `user` ON `user`.`npm` = `transaksi`.`npm`
+JOIN `kartu` ON `kartu`.`id_kartu` = `user`.`id_kartu`
+JOIN `role` ON `role`.`id_role` = `user`.`id_role`
+WHERE `npm` = \'1\'
+AND   (
+`user`.`npm` LIKE \'%2021320004%\' ESCAPE \'!\'
+OR  `kartu`.`nomor_kartu` LIKE \'%2021320004%\' ESCAPE \'!\'
+OR  `user`.`nama` LIKE \'%2021320004%\' ESCAPE \'!\'
+ )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `user` ON `user`.`npm` = `transaksi`.`npm`
+JOIN `kartu` ON `kartu`.`id_kartu` = `user`.`id_kartu`
+JOIN `role` ON `role`.`id_role` = `user`.`id_role`
+WHERE `npm` = \'1\'
+AND   (
+`user`.`npm` LIKE \'%2021320004%\' ESCAPE \'!\'
+OR  `kartu`.`nomor_kartu` LIKE \'%2021320004%\' ESCAPE \'!\'
+OR  `user`.`nama` LIKE \'%2021320004%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `user` ON `user`.`npm` = `transaksi`.`npm`
+JOIN `kartu` ON `kartu`.`id_kartu` = `user`.`id_kartu`
+JOIN `role` ON `role`.`id_role` = `user`.`id_role`
+WHERE `npm` = \'1\'
+AND   (
+`user`.`npm` LIKE \'%2021320004%\' ESCAPE \'!\'
+OR  `kartu`.`nomor_kartu` LIKE \'%2021320004%\' ESCAPE \'!\'
+OR  `user`.`nama` LIKE \'%2021320004%\' ESCAPE \'!\'
+ )')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `user` ON `user`.`npm` = `transaksi`.`npm`
+JOIN `kartu` ON `kartu`.`id_kartu` = `user`.`id_kartu`
+JOIN `role` ON `role`.`id_role` = `user`.`id_role`
+WHERE `npm` = :npm:
+AND   (
+`user`.`npm` LIKE :user.npm: ESCAPE \'!\'
+OR  `kartu`.`nomor_kartu` LIKE :kartu.nomor_kartu: ESCAPE \'!\'
+OR  `user`.`nama` LIKE :user.nama: ESCAPE \'!\'
+ )', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\Search_user.php(25): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Search_user->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Search_user))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-28 23:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:42:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:46:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-28 23:46:11 --> Undefined array key "nomor_kartu"
+in APPPATH\Views\r_admin\search_user.php on line 37.
+ 1 APPPATH\Views\r_admin\search_user.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nomor_kartu"', 'C:\\xampp\\htdocs\\DATACI\\app\\Views\\r_admin\\search_user.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\DATACI\\app\\Views\\r_admin\\search_user.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_admin/search_user', [], true)
+ 5 APPPATH\Controllers\Admin\Search_user.php(38): view('r_admin/search_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Search_user->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Search_user))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-28 23:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:46:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-28 23:46:20 --> Undefined array key "nomor_kartu"
+in APPPATH\Views\r_admin\search_user.php on line 37.
+ 1 APPPATH\Views\r_admin\search_user.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nomor_kartu"', 'C:\\xampp\\htdocs\\DATACI\\app\\Views\\r_admin\\search_user.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\DATACI\\app\\Views\\r_admin\\search_user.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_admin/search_user', [], true)
+ 5 APPPATH\Controllers\Admin\Search_user.php(38): view('r_admin/search_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Search_user->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Search_user))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-28 23:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-28 23:48:51 --> syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+in APPPATH\Views\r_admin\search_user.php on line 118.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_admin/search_user', [], true)
+ 3 APPPATH\Controllers\Admin\Search_user.php(38): view('r_admin/search_user', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Search_user->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Search_user))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-28 23:49:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-28 23:52:04 --> Undefined variable $currentPage
+in APPPATH\Views\r_admin\search_user.php on line 71.
+ 1 APPPATH\Views\r_admin\search_user.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $currentPage', 'C:\\xampp\\htdocs\\DATACI\\app\\Views\\r_admin\\search_user.php', 71)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\DATACI\\app\\Views\\r_admin\\search_user.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_admin/search_user', [], true)
+ 5 APPPATH\Controllers\Admin\Search_user.php(40): view('r_admin/search_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Search_user->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Search_user))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-28 23:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-28 23:52:14 --> Undefined variable $currentPage
+in APPPATH\Views\r_admin\search_user.php on line 74.
+ 1 APPPATH\Views\r_admin\search_user.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $currentPage', 'C:\\xampp\\htdocs\\DATACI\\app\\Views\\r_admin\\search_user.php', 74)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\DATACI\\app\\Views\\r_admin\\search_user.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_admin/search_user', [], true)
+ 5 APPPATH\Controllers\Admin\Search_user.php(40): view('r_admin/search_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Search_user->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Search_user))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-28 23:53:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-28 23:53:02 --> Undefined variable $users
+in APPPATH\Views\r_admin\search_user.php on line 73.
+ 1 APPPATH\Views\r_admin\search_user.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', 'C:\\xampp\\htdocs\\DATACI\\app\\Views\\r_admin\\search_user.php', 73)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\DATACI\\app\\Views\\r_admin\\search_user.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('r_admin/search_user', [], true)
+ 5 APPPATH\Controllers\Admin\Search_user.php(40): view('r_admin/search_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Search_user->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Search_user))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-28 23:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:55:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:57:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-28 23:59:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

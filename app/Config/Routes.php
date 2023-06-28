@@ -79,6 +79,7 @@ $routes->group('admin', ['filter' => 'roleFilter'], function ($routes) {
     //endPengumuman
     //search
     $routes->post('search', 'Admin\Search::index');
+    $routes->post('search_user', 'Admin\Search_user::index');
     //endSearch
 });
 //role keuangan
