@@ -23,7 +23,8 @@ class TransaksiModel extends Model
         'id_status_transaksi',
         'bukti_pembayaran',
         'created_at',
-        'updated_at'
+        'updated_at',
+        'validator'
     ];
 
     public function searchTransaksi($keyword, $startDate, $endDate, $id_status_transaksi)

@@ -47,6 +47,7 @@ $this->section('page_content'); ?>
                                 <th>Saldo Akhir</th>
                                 <th>Status</th>
                                 <th>Tanggal</th>
+                                <th>Validator</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -83,7 +84,7 @@ $this->section('page_content'); ?>
                                         <?php endif ?>
                                     </td>
                                     <td><?= $tr['updated_at']; ?></td>
-                                    
+                                    <td><?= $tr['validator']; ?></td>
                                 </tr>
                             <?php
                             endforeach;

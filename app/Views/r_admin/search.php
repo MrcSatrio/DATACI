@@ -19,32 +19,33 @@
             <div class="card-header">
                 Riwayat Transaksi
                 <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100" action="<?= base_url() ?><?= $user['nama_role']; ?>/search" method="POST">
-    <div class="input-group">
-        <input type="text" class="form-control bg-light border-0 small" placeholder="Keyword" name="keyword">
-        <div class="form-group">
-            <label for="start_date"> Tanggal Mulai: </label>
-            <input type="date" name="start_date" id="start_date" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="end_date"> Tanggal Akhir: </label>
-            <input type="date" name="end_date" id="end_date" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="jenis_transaksi"> Status Transaksi: </label>
-            <select name="id_status_transaksi" id="id_status_transaksi" class="form-control">
-                <option value="3">Approved</option>
-                <option value="1">Pending</option>
-                <option value="4">Cancel</option>
-            </select>
-        </div>
-        <div class="input-group-append">
-            <button class="btn btn-primary" type="submit">
-                <i class="fas fa-search fa-sm"></i>
-            </button>
-        </div>
-    </div>
-</form>
+                    <div class="input-group">
+                        <input type="text" class="form-control bg-light border-0 small" placeholder="Keyword" name="keyword">
+                        <div class="form-group">
+                            <label for="start_date"> Tanggal Mulai: </label>
+                            <input type="date" name="start_date" id="start_date" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="end_date"> Tanggal Akhir: </label>
+                            <input type="date" name="end_date" id="end_date" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="jenis_transaksi"> Status Transaksi: </label>
+                            <select name="id_status_transaksi" id="id_status_transaksi" class="form-control">
+                                <option value="3">Approved</option>
+                                <option value="1">Pending</option>
+                                <option value="4">Cancel</option>
+                            </select>
+                        </div>
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-search fa-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
                 <button class="btn btn-primary" onclick="printPage()">Cetak</button>
+                <button class="btn btn-primary" onclick="exportToExcel()">Unduh Excel</button>
                 <button class="btn btn-primary" onclick="window.location.href='<?= base_url(); ?>keuangan/transaksi_riwayat'">Kembali</button>
             </div>
             <div class="card-body">
@@ -61,54 +62,56 @@
                                 <th>Metode Pembayaran</th>
                                 <th>Bukti Transfer</th>
                                 <th>Tanggal</th>
+                                <th>Validator</th>
                             </tr>
                         </thead>
                         <tbody>
-                        <?php
-                        usort($transaksi, function ($a, $b) {
-                            return strtotime($b['created_at']) - strtotime($a['created_at']);
-                        });
-                        foreach ($transaksi as $tr) : ?>
-                            <tr>
-                                <td><?= $tr['id_transaksi']; ?></td>
-                                <td><?= $tr['kodebooking_transaksi']; ?></td>
-                                <td><?= $tr['npm']; ?></td>
-                                <td>
-                                    <?php if ($tr['id_jenis_transaksi'] == 1) : ?>
-                                        <span class="badge badge-info">Top_Up</span>
-                                    <?php elseif ($tr['id_jenis_transaksi'] == 2) : ?>
-                                        <span class="badge badge-warning">Kartu-Hilang</span>
+                            <?php
+                            usort($transaksi, function ($a, $b) {
+                                return strtotime($b['created_at']) - strtotime($a['created_at']);
+                            });
+                            foreach ($transaksi as $tr) : ?>
+                                <tr>
+                                    <td><?= $tr['id_transaksi']; ?></td>
+                                    <td><?= $tr['kodebooking_transaksi']; ?></td>
+                                    <td><?= $tr['npm']; ?></td>
+                                    <td>
+                                        <?php if ($tr['id_jenis_transaksi'] == 1) : ?>
+                                            <span class="badge badge-info">Top_Up</span>
+                                        <?php elseif ($tr['id_jenis_transaksi'] == 2) : ?>
+                                            <span class="badge badge-warning">Kartu-Hilang</span>
                                         <?php elseif ($tr['id_jenis_transaksi'] == 3) : ?>
-                                        <span class="badge badge-warning">Parkir</span>
-                                    <?php endif ?>
-                                </td>
-                                <td><?= 'Rp ' . number_format($tr['nominal_transaksi']); ?></td>
-                                <td>
-                                    <?php if ($tr['id_status_transaksi'] == 1) : ?>
-                                        <span class="badge badge-warning">Pending</span>
-                                    <?php elseif ($tr['id_status_transaksi'] == 2) : ?>
-                                        <span class="badge badge-success">Complete</span>
-                                    <?php elseif ($tr['id_status_transaksi'] == 3) : ?>
-                                        <span class="badge badge-success">Approved</span>
-                                    <?php elseif ($tr['id_status_transaksi'] == 4) : ?>
-                                        <span class="badge badge-danger">Cancel</span>
-                                    <?php endif ?>
-                                </td>
-                                <td>
-                                    <?php if ($tr['id_jenis_pembayaran'] == 1) : ?>
-                                        <span class="badge badge-primary">Cash</span>
-                                    <?php elseif ($tr['id_jenis_pembayaran'] == 2) : ?>
-                                        <span class="badge badge-secondary">Transfer</span>
-                                    <?php endif ?>
-                                </td>
-                                <td>
-                                <?php if ($tr['id_jenis_pembayaran'] == 2 && $tr['id_status_transaksi'] != 4 && !empty($tr['bukti_pembayaran'])) : ?>
-    <a target="_blank" href="<?= base_url('uploads/bukti/' . $tr['bukti_pembayaran']); ?>" class="btn btn-primary" style="padding: 5px 5px;">Lihat Bukti</a>
-<?php endif; ?>
-                                </td>
-                                <td><?= $tr['updated_at']; ?></td>
-                            </tr>
-                        <?php endforeach; ?>
+                                            <span class="badge badge-warning">Parkir</span>
+                                        <?php endif ?>
+                                    </td>
+                                    <td><?= 'Rp ' . number_format($tr['nominal_transaksi']); ?></td>
+                                    <td>
+                                        <?php if ($tr['id_status_transaksi'] == 1) : ?>
+                                            <span class="badge badge-warning">Pending</span>
+                                        <?php elseif ($tr['id_status_transaksi'] == 2) : ?>
+                                            <span class="badge badge-success">Complete</span>
+                                        <?php elseif ($tr['id_status_transaksi'] == 3) : ?>
+                                            <span class="badge badge-success">Approved</span>
+                                        <?php elseif ($tr['id_status_transaksi'] == 4) : ?>
+                                            <span class="badge badge-danger">Cancel</span>
+                                        <?php endif ?>
+                                    </td>
+                                    <td>
+                                        <?php if ($tr['id_jenis_pembayaran'] == 1) : ?>
+                                            <span class="badge badge-primary">Cash</span>
+                                        <?php elseif ($tr['id_jenis_pembayaran'] == 2) : ?>
+                                            <span class="badge badge-secondary">Transfer</span>
+                                        <?php endif ?>
+                                    </td>
+                                    <td>
+                                        <?php if ($tr['id_jenis_pembayaran'] == 2 && $tr['id_status_transaksi'] != 4 && !empty($tr['bukti_pembayaran'])) : ?>
+                                            <a target="_blank" href="<?= base_url('uploads/bukti/' . $tr['bukti_pembayaran']); ?>" class="btn btn-primary" style="padding: 5px 5px;">Lihat Bukti</a>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td><?= $tr['updated_at']; ?></td>
+                                    <td><?= $tr['validator']; ?></td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
@@ -131,5 +134,41 @@
 
     function openImageInNewTab(imageUrl) {
         window.open(imageUrl, '_blank');
+    }
+</script>
+<script>
+    function exportToExcel() {
+        // Get the table element
+        const table = document.querySelector('.table');
+
+        // Create a new Workbook
+        const workbook = new ExcelJS.Workbook();
+        const worksheet = workbook.addWorksheet('Transactions');
+
+        // Convert the HTML table to worksheet
+        XlsxPopulate.fromTable(table).then(function (workbook) {
+            // Save the workbook as a Blob
+            workbook.xlsx.writeBuffer().then(function (buffer) {
+                // Create a Blob object
+                const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+
+                // Create a temporary anchor element
+                const a = document.createElement('a');
+                a.style.display = 'none';
+
+                // Set the anchor's properties
+                const url = window.URL.createObjectURL(blob);
+                a.href = url;
+                a.download = 'transactions.xlsx';
+
+                // Append the anchor to the body and click it
+                document.body.appendChild(a);
+                a.click();
+
+                // Clean up
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            });
+        });
     }
 </script>

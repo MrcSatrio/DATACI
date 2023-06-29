@@ -56,6 +56,7 @@
                                 <th>Metode Pembayaran</th>
                                 <th>Bukti Transfer</th>
                                 <th>Tanggal</th>
+                                <th>Validator</th>
                                 <th>Cetak</th>
                             </tr>
                         </thead>
@@ -105,6 +106,7 @@
 
                                     </td>
                                     <td><?= $tr['updated_at']; ?></td>
+                                    <td><?= $tr['validator']; ?></td>
                                     <td>
                                         <?php if ($tr['id_status_transaksi'] == 3) : ?>
                                             <form method="POST" action="<?= base_url(); ?>keuangan/cetak/<?= $tr['id_transaksi']; ?>">

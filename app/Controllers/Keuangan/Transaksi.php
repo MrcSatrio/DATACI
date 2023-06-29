@@ -77,74 +77,76 @@ class Transaksi extends BaseController
     }
 
     public function transaksi_approve()
-    {
-        $validationRules = [
-            'nomor_kartu' => [
-                    'rules' => 'is_unique[kartu.nomor_kartu]',
-                    'errors' => [
-                        'is_unique' => 'Nomor Kartu ini Telah Digunakan Sebelumnya',
-                        'required' => 'Harus Di Isi'
-                    ]
-                ]
-        ];
-    
-        if (!$this->validate($validationRules)) {
-            session()->setFlashdata('error', $this->validator->listErrors());
-            return redirect()->to("keuangan/transaksi_inputkodebooking");
-        }
-        $kodebooking_transaksi = $this->request->getVar('kode_booking');
-        $nomor_kartu = $this->request->getVar('nomor_kartu');
-
-        $data =
-            [
-                'title' => 'Parking Management System',
-                'user' => $this->userModel
-                    ->join('role', 'role.id_role = user.id_role')
-                    ->where('npm', session('npm'))
-                    ->first(),
-                'transaksi' => $this->transaksiModel
-                    ->join('user', 'user.npm = transaksi.npm')
-                    ->join('kartu', 'kartu.id_kartu = user.id_kartu')
-                    ->join('status_transaksi', 'status_transaksi.id_status_transaksi = transaksi.id_status_transaksi')
-                    ->join('jenis_transaksi', 'jenis_transaksi.id_jenis_transaksi = transaksi.id_jenis_transaksi')
-                    ->where('kodebooking_transaksi', $kodebooking_transaksi)
-                    ->first(),
-                'harga' => $this->request->getVar('total_harga'),
-            ];
-        $transaksi = $this->transaksiModel
-            ->join('user', 'user.npm = transaksi.npm')
-            ->join('kartu', 'kartu.id_kartu = user.id_kartu')
-            ->where('kodebooking_transaksi', $kodebooking_transaksi)
-            ->first();
-
-        $this->transaksiModel->save(
-            [
-                'id_transaksi' => $transaksi['id_transaksi'],
-                'saldoawal_transaksi' => $transaksi['saldo'],
-                'saldoakhir_transaksi' => $transaksi['saldo'] + $transaksi['nominal_transaksi'],
-                'id_status_transaksi' => 3,
+{
+    $validationRules = [
+        'nomor_kartu' => [
+            'rules' => 'is_unique[kartu.nomor_kartu]',
+            'errors' => [
+                'is_unique' => 'Nomor Kartu ini Telah Digunakan Sebelumnya',
+                'required' => 'Harus Di Isi'
             ]
-        );
-        if (!$nomor_kartu) {
-            $this->kartuModel->save(
-                [
-                    'id_kartu' => $transaksi['id_kartu'],
-                    'saldo' => $transaksi['saldo'] + $transaksi['nominal_transaksi'],
-                ]
-            );
-        } else {
-            $this->kartuModel->save(
-                [
-                    'id_kartu' => $transaksi['id_kartu'],
-                    'nomor_kartu' => $nomor_kartu,
-                    'saldo' => $transaksi['saldo'] + $transaksi['nominal_transaksi'],
-                ]
-            );
-        }
+        ]
+    ];
 
-
-        return view('r_keuangan/transaksi_approve', $data);
+    if (!$this->validate($validationRules)) {
+        session()->setFlashdata('error', $this->validator->listErrors());
+        return redirect()->to("keuangan/transaksi_inputkodebooking");
     }
+
+    $kodebooking_transaksi = $this->request->getVar('kode_booking');
+    $nomor_kartu = $this->request->getVar('nomor_kartu');
+
+    $approvedBy = $this->userModel
+        ->where('npm', session('npm'))
+        ->first();
+
+        $data = [
+            'title' => 'Parking Management System',
+            'user' => $this->userModel
+                ->join('role', 'role.id_role = user.id_role')
+                ->where('npm', session('npm'))
+                ->first(['user.*', 'role.nama_role']), // Add 'role.nama_role' to retrieve the role name
+            'transaksi' => $this->transaksiModel
+                ->join('user', 'user.npm = transaksi.npm')
+                ->join('kartu', 'kartu.id_kartu = user.id_kartu')
+                ->join('status_transaksi', 'status_transaksi.id_status_transaksi = transaksi.id_status_transaksi')
+                ->join('jenis_transaksi', 'jenis_transaksi.id_jenis_transaksi = transaksi.id_jenis_transaksi')
+                ->where('kodebooking_transaksi', $kodebooking_transaksi)
+                ->first(),
+            'harga' => $this->request->getVar('total_harga'),
+        ];
+        
+
+    $transaksi = $this->transaksiModel
+        ->join('user', 'user.npm = transaksi.npm')
+        ->join('kartu', 'kartu.id_kartu = user.id_kartu')
+        ->where('kodebooking_transaksi', $kodebooking_transaksi)
+        ->first();
+
+    $this->transaksiModel->save([
+        'id_transaksi' => $transaksi['id_transaksi'],
+        'saldoawal_transaksi' => $transaksi['saldo'],
+        'saldoakhir_transaksi' => $transaksi['saldo'] + $transaksi['nominal_transaksi'],
+        'id_status_transaksi' => 3,
+        'validator' => $approvedBy['nama'] // Menyimpan data Approved by ke dalam kolom 'approved_by'
+    ]);
+
+    if (!$nomor_kartu) {
+        $this->kartuModel->save([
+            'id_kartu' => $transaksi['id_kartu'],
+            'saldo' => $transaksi['saldo'] + $transaksi['nominal_transaksi'],
+        ]);
+    } else {
+        $this->kartuModel->save([
+            'id_kartu' => $transaksi['id_kartu'],
+            'nomor_kartu' => $nomor_kartu,
+            'saldo' => $transaksi['saldo'] + $transaksi['nominal_transaksi'],
+        ]);
+    }
+
+    return view('r_keuangan/transaksi_approve', $data);
+}
+
 
     public function topup()
     {

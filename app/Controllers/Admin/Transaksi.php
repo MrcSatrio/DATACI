@@ -96,13 +96,17 @@ class Transaksi extends BaseController
         $kodebooking_transaksi = $this->request->getVar('kode_booking');
         $nomor_kartu = $this->request->getVar('nomor_kartu');
 
+        $approvedBy = $this->userModel
+        ->where('npm', session('npm'))
+        ->first();
+
         $data =
             [
                 'title' => 'Parking Management System',
                 'user' => $this->userModel
                     ->join('role', 'role.id_role = user.id_role')
                     ->where('npm', session('npm'))
-                    ->first(),
+                    ->first(['user.*', 'role.nama_role']),
                 'transaksi' => $this->transaksiModel
                     ->join('user', 'user.npm = transaksi.npm')
                     ->join('kartu', 'kartu.id_kartu = user.id_kartu')
@@ -124,6 +128,7 @@ class Transaksi extends BaseController
                 'saldoawal_transaksi' => $transaksi['saldo'],
                 'saldoakhir_transaksi' => $transaksi['saldo'] + $transaksi['nominal_transaksi'],
                 'id_status_transaksi' => 3,
+                'validator' => $approvedBy['nama']
             ]
         );
         if (!$nomor_kartu) {
