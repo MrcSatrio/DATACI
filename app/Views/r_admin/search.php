@@ -6,6 +6,14 @@
 <link href="<?= base_url(); ?>/assets/css/sb-admin-2.min.css" rel="stylesheet">
 
 <!-- Bootstrap -->
+<script src="https://unpkg.com/xlsx-style/dist/xlsx-style.min.js"></script>
+<!-- ExcelJS -->
+<script src="https://unpkg.com/exceljs/dist/exceljs.min.js"></script>
+
+<!-- XlsxPopulate -->
+<script src="https://unpkg.com/xlsx-populate/browser/xlsx-populate.min.js"></script>
+<!-- ExcelJS -->
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 <?php if (!empty(session()->getFlashdata('error'))) : ?>
@@ -138,37 +146,63 @@
 </script>
 <script>
     function exportToExcel() {
-        // Get the table element
         const table = document.querySelector('.table');
-
-        // Create a new Workbook
         const workbook = new ExcelJS.Workbook();
         const worksheet = workbook.addWorksheet('Transactions');
 
-        // Convert the HTML table to worksheet
-        XlsxPopulate.fromTable(table).then(function (workbook) {
-            // Save the workbook as a Blob
-            workbook.xlsx.writeBuffer().then(function (buffer) {
-                // Create a Blob object
-                const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-
-                // Create a temporary anchor element
-                const a = document.createElement('a');
-                a.style.display = 'none';
-
-                // Set the anchor's properties
-                const url = window.URL.createObjectURL(blob);
-                a.href = url;
-                a.download = 'transactions.xlsx';
-
-                // Append the anchor to the body and click it
-                document.body.appendChild(a);
-                a.click();
-
-                // Clean up
-                document.body.removeChild(a);
-                window.URL.revokeObjectURL(url);
-            });
+        // Add table headers to the worksheet
+        const headerRow = worksheet.addRow([]);
+        const headerCells = table.querySelectorAll('th');
+        headerCells.forEach(cell => {
+            headerRow.getCell(cell.cellIndex + 1).value = cell.textContent.trim();
         });
-    }
+
+        // Iterate over each table row and column to populate the worksheet
+        const rows = table.getElementsByTagName('tr');
+        for (let i = 1; i < rows.length; i++) {
+            const row = rows[i];
+            const columns = row.getElementsByTagName('td');
+            const values = [];
+
+            for (let j = 0; j < columns.length; j++) {
+                // Check if the current column is the "Bukti Transfer" column
+                if (j === 7) {
+                    const buktiCell = columns[j];
+                    const buktiLink = buktiCell.querySelector('a');
+                    if (buktiLink) {
+                        // If there is a link, add the link address to the cell as a formula
+                        const linkFormula = `HYPERLINK("${buktiLink.href}", "Lihat Bukti")`;
+                        values.push({ formula: linkFormula });
+                    } else {
+                        values.push('');
+                    }
+                } else {
+                    values.push(columns[j].innerText);
+                }
+            }
+
+            worksheet.addRow(values);
+        }
+
+        // Apply hyperlink style to the "Bukti Transfer" column
+        worksheet.getColumn(8).eachCell(cell => {
+            if (cell.value && cell.value.hyperlink) {
+                cell.font = { color: { argb: '0563C1' }, underline: true };
+            }
+        });
+
+        // Save the workbook as a Blob
+        workbook.xlsx.writeBuffer().then(function (buffer) {
+            const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            a.download = 'transactions.xlsx';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        });
+    }
 </script>
