@@ -89,7 +89,7 @@ class User extends BaseController
             return redirect()->back()->withInput();
         }
 
-
+        $loggedInNpm = session('npm');
         $npm = $this->request->getVar('npm');
         $password = $npm;
 
@@ -111,6 +111,14 @@ class User extends BaseController
                 'password' => md5($password)
             ];
         $this->userModel->insert($datauser);
+        $logModel = new \App\Models\LogModel();
+        $logData = [
+            'npm' => $loggedInNpm,
+            'action' => 'User_Add',
+            'details' => 'Pengguna ' . $datauser['npm'] .' Ditambahkan',
+            'ip_address' => $this->request->getIPAddress()
+        ];
+        $logModel->insert($logData);
 
         // Tampilkan pesan berhasil
         session()->setFlashdata('success', '<br>');

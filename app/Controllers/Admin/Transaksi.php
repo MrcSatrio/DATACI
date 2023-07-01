@@ -88,69 +88,74 @@ class Transaksi extends BaseController
                 ]
             ]
         ];
-
+    
         if (!$this->validate($validationRules)) {
             session()->setFlashdata('error', $this->validator->listErrors());
             return redirect()->to("admin/transaksi_inputkodebooking");
         }
+    
         $kodebooking_transaksi = $this->request->getVar('kode_booking');
         $nomor_kartu = $this->request->getVar('nomor_kartu');
-
+    
         $approvedBy = $this->userModel
-        ->where('npm', session('npm'))
-        ->first();
-
-        $data =
-            [
-                'title' => 'Parking Management System',
-                'user' => $this->userModel
-                    ->join('role', 'role.id_role = user.id_role')
-                    ->where('npm', session('npm'))
-                    ->first(['user.*', 'role.nama_role']),
-                'transaksi' => $this->transaksiModel
-                    ->join('user', 'user.npm = transaksi.npm')
-                    ->join('kartu', 'kartu.id_kartu = user.id_kartu')
-                    ->join('status_transaksi', 'status_transaksi.id_status_transaksi = transaksi.id_status_transaksi')
-                    ->join('jenis_transaksi', 'jenis_transaksi.id_jenis_transaksi = transaksi.id_jenis_transaksi')
-                    ->where('kodebooking_transaksi', $kodebooking_transaksi)
-                    ->first(),
-                'harga' => $this->request->getVar('total_harga'),
-            ];
+            ->where('npm', session('npm'))
+            ->first();
+    
         $transaksi = $this->transaksiModel
             ->join('user', 'user.npm = transaksi.npm')
             ->join('kartu', 'kartu.id_kartu = user.id_kartu')
             ->where('kodebooking_transaksi', $kodebooking_transaksi)
             ->first();
-
-        $this->transaksiModel->save(
-            [
-                'id_transaksi' => $transaksi['id_transaksi'],
-                'saldoawal_transaksi' => $transaksi['saldo'],
-                'saldoakhir_transaksi' => $transaksi['saldo'] + $transaksi['nominal_transaksi'],
-                'id_status_transaksi' => 3,
-                'validator' => $approvedBy['nama']
-            ]
-        );
-        if (!$nomor_kartu) {
-            $this->kartuModel->save(
-                [
-                    'id_kartu' => $transaksi['id_kartu'],
-                    'saldo' => $transaksi['saldo'] + $transaksi['nominal_transaksi'],
-                ]
-            );
-        } else {
-            $this->kartuModel->save(
-                [
-                    'id_kartu' => $transaksi['id_kartu'],
-                    'nomor_kartu' => $nomor_kartu,
-                    'saldo' => $transaksi['saldo'] + $transaksi['nominal_transaksi'],
-                ]
-            );
+    
+        $this->transaksiModel->save([
+            'id_transaksi' => $transaksi['id_transaksi'],
+            'saldoawal_transaksi' => $transaksi['saldo'],
+            'saldoakhir_transaksi' => $transaksi['saldo'] + $transaksi['nominal_transaksi'],
+            'id_status_transaksi' => 3,
+            'validator' => $approvedBy['nama']
+        ]);
+    
+        $kartuData = [
+            'id_kartu' => $transaksi['id_kartu'],
+            'saldo' => $transaksi['saldo'] + $transaksi['nominal_transaksi']
+        ];
+    
+        if ($nomor_kartu) {
+            $kartuData['nomor_kartu'] = $nomor_kartu;
         }
-
-
+    
+        $this->kartuModel->save($kartuData);
+    
+        $logData = [
+            'npm' => session('npm'),
+            'action' => 'transaksi_approve',
+            'details' => 'Transaksi dengan kode booking ' . $kodebooking_transaksi . ' disetujui',
+            'ip_address' => $this->request->getIPAddress()
+        ];
+    
+        $logModel = new \App\Models\LogModel();
+        $logModel->insert($logData);
+    
+        $data = [
+            'title' => 'Parking Management System',
+            'user' => $this->userModel
+                ->join('role', 'role.id_role = user.id_role')
+                ->where('npm', session('npm'))
+                ->first(['user.*', 'role.nama_role']),
+            'transaksi' => $this->transaksiModel
+                ->join('user', 'user.npm = transaksi.npm')
+                ->join('kartu', 'kartu.id_kartu = user.id_kartu')
+                ->join('status_transaksi', 'status_transaksi.id_status_transaksi = transaksi.id_status_transaksi')
+                ->join('jenis_transaksi', 'jenis_transaksi.id_jenis_transaksi = transaksi.id_jenis_transaksi')
+                ->where('kodebooking_transaksi', $kodebooking_transaksi)
+                ->first(),
+            'harga' => $this->request->getVar('total_harga'),
+        ];
+    
         return view('r_admin/transaksi_approve', $data);
     }
+    
+    
 
     public function topup()
     {
@@ -181,14 +186,14 @@ class Transaksi extends BaseController
         $transaksiJenis = array_column($transaksiData, 'id_status_transaksi');
     
         if ($user['id_status'] == 1 && in_array(1, $transaksiJenis)) {
-            session()->setFlashdata('error', 'Topup gagal. Anda sudah memiliki transaksi yang sedang pending.');
+            session()->setFlashdata('error', 'Transaksi gagal. Anda sudah memiliki transaksi yang sedang diproses.');
             return redirect()->back()->withInput();
         } elseif ($user['id_status'] == 2) {
             $masaBerlaku = strtotime($user['masa_berlaku']);
             $currentTime = time();
     
             if ($masaBerlaku > $currentTime || in_array(1, $transaksiJenis)) {
-                session()->setFlashdata('error', 'Topup gagal. Anda sudah memiliki transaksi yang sedang pending atau masa berlaku Member belum habis.');
+                session()->setFlashdata('error', 'Transaksi gagal. Anda sudah memiliki transaksi yang sedang diproses atau masa berlaku Member belum habis.');
                 return redirect()->back()->withInput();
             }
         }
@@ -215,6 +220,15 @@ class Transaksi extends BaseController
             'id_status_transaksi' => $id_status_transaksi
         ];
         $this->transaksiModel->save($transaksi);
+        $logData = [
+            'npm' => session('npm'),
+            'action' => 'transaksi_Topup',
+            'details' => 'Topup dengan kode booking ' . $kodebooking_transaksi . ' sebesar ' . $nominal_saldo ,
+            'ip_address' => $this->request->getIPAddress()
+        ];
+        $logModel = new \App\Models\LogModel();
+        $logModel->insert($logData);
+        
     
         return redirect()->to("user/transaksi_result/$kodebooking_transaksi/$nominal_saldo/$id_jenis_pembayaran");
     }
@@ -262,14 +276,14 @@ class Transaksi extends BaseController
     $transaksiJenis = array_column($transaksiData, 'id_status_transaksi');
 
     if ($user['id_status'] == 1 && in_array(1, $transaksiJenis)) {
-        session()->setFlashdata('error', 'Topup gagal. Anda sudah memiliki transaksi yang sedang diproses.');
+        session()->setFlashdata('error', 'Transaksi gagal. Anda sudah memiliki transaksi yang sedang diproses.');
         return redirect()->back()->withInput();
     } elseif ($user['id_status'] == 2) {
         $masaBerlaku = strtotime($user['masa_berlaku']);
         $currentTime = time();
 
         if ($masaBerlaku > $currentTime || in_array(1, $transaksiJenis)) {
-            session()->setFlashdata('error', 'Topup gagal. Anda sudah memiliki transaksi yang sedang diproses atau masa berlaku Member belum habis.');
+            session()->setFlashdata('error', 'Transaksi gagal. Anda sudah memiliki transaksi yang sedang diproses atau masa berlaku Member belum habis.');
             return redirect()->back()->withInput();
         }
     }
@@ -298,6 +312,15 @@ class Transaksi extends BaseController
         'id_kartu' => $user['id_kartu'],
         'nomor_kartu' => null,
     ]);
+    $logData = [
+        'npm' => session('npm'),
+        'action' => 'transaksi_KartuHilang',
+        'details' => 'Transaksi kartu hilang dengan kode booking ' . $kodebooking_transaksi . ' sebesar ' . $nominal_transaksi,
+        'ip_address' => $this->request->getIPAddress()
+    ];
+    $logModel = new \App\Models\LogModel();
+    $logModel->insert($logData);
+    
 
     // Perpindahan ke fungsi transaksi_result untuk menampilkan kodebooking dan nominal
     return redirect()->to("user/transaksi_result/ $kodebooking_transaksi/$total_harga/$id_jenis_pembayaran");
@@ -352,6 +375,15 @@ class Transaksi extends BaseController
     }
     public function cancel($id_transaksi)
     {
+        $logData = [
+            'npm' => session('npm'),
+            'action' => 'Transaksi_Cancel',
+            'details' => 'Transaksi dengan ID ' . $id_transaksi . ' dibatalkan',
+            'ip_address' => $this->request->getIPAddress()
+        ];
+        $logModel = new \App\Models\LogModel();
+        $logModel->insert($logData);
+        
         
         $data = $this->request->getPost();
         $id_status_transaksi = $data['id_status_transaksi'];
@@ -369,6 +401,7 @@ class Transaksi extends BaseController
             ->first();
     
         $this->transaksiModel->update($user['id_transaksi'], $data);
+        
         session()->setFlashdata('success', 'Transaksi Berhasil Dibatalkan.');
         return redirect()->back()->withInput();
     }

@@ -59,46 +59,57 @@ class User extends BaseController
                 ]
             ]
         ];
-
+    
         if ($this->request->getVar('npm') && strlen($this->request->getVar('npm')) > 10) {
             $validationRules['npm']['rules'] .= '|max_length[10]';
             $validationRules['npm']['errors']['max_length'] = 'Nomor Pokok tidak lebih dari 10 angka';
         }
-
+    
         if (!$this->validate($validationRules)) {
             session()->setFlashdata('error', $this->validator->listErrors());
             return redirect()->back()->withInput();
         }
-
-
+    
+        $loggedInNpm = session('npm');
+    
         $npm = $this->request->getVar('npm');
         $password = $npm;
-
+    
         // Jika berhasil, simpan data ke database
-        $this->kartuModel->save(
-            [
-                'nomor_kartu' => $this->request->getVar('nomor_kartu'),
-                'saldo' => $this->request->getVar('saldo'),
-            ]
-        );
-        $datauser =
-            [
-                'npm' => $npm,
-                'id_kartu' => $this->kartuModel->getInsertID(),
-                'id_role' => $this->request->getVar('id_role'),
-                'id_status' => $this->request->getVar('id_status'),
-                'nama' => $this->request->getVar('nama'),
-                'email' => $this->request->getVar('email'),
-                'password' => md5($password),
-                'id_status'  => $this->request->getVar('id_status'),
-                'masa_berlaku'=> $this->request->getVar('masa_berlaku'),
-            ];
+        $this->kartuModel->save([
+            'nomor_kartu' => $this->request->getVar('nomor_kartu'),
+            'saldo' => $this->request->getVar('saldo'),
+        ]);
+    
+        $datauser = [
+            'npm' => $npm,
+            'id_kartu' => $this->kartuModel->getInsertID(),
+            'id_role' => $this->request->getVar('id_role'),
+            'id_status' => $this->request->getVar('id_status'),
+            'nama' => $this->request->getVar('nama'),
+            'email' => $this->request->getVar('email'),
+            'password' => md5($password),
+            'id_status'  => $this->request->getVar('id_status'),
+            'masa_berlaku' => $this->request->getVar('masa_berlaku'),
+        ];
+    
         $this->userModel->insert($datauser);
-
+    
+        // Simpan kegiatan penambahan pengguna dalam log aktivitas
+        $logModel = new \App\Models\LogModel();
+        $logData = [
+            'npm' => $loggedInNpm,
+            'action' => 'User_Add',
+            'details' => 'Pengguna ' . $datauser['npm'] .' Ditambahkan',
+            'ip_address' => $this->request->getIPAddress()
+        ];
+        $logModel->insert($logData);
+    
         // Tampilkan pesan berhasil
         session()->setFlashdata('success', '<br>');
         return redirect()->to(base_url('admin/create'));
     }
+    
 
     public function userRead()
     {
@@ -122,12 +133,33 @@ class User extends BaseController
     }
 
     public function userDelete($npm)
-    {
+{
+    $user = $this->userModel->where('npm', $npm)->first();
+
+    if ($user) {
+        // Mendapatkan NPM pengguna yang sedang login
+        $loggedInNpm = session('npm');
+
+        // Simpan kegiatan penghapusan pengguna dalam log aktivitas
+        $logModel = new \App\Models\LogModel();
+        $logData = [
+            'npm' => $loggedInNpm,
+            'action' => 'User_Delete',
+            'details' => 'Pengguna ' . $user['npm'] . ' Telah Dihapus',
+            'ip_address' => $this->request->getIPAddress()
+        ];
+        $logModel->insert($logData);
+
         $this->userModel->where('npm', $npm)->delete();
         $session = session();
-        session()->setFlashdata('hapus', 'Data Berhasil DIhapus');
+        session()->setFlashdata('hapus', 'Data Berhasil Dihapus');
         return redirect()->to(base_url('admin/read'));
+    } else {
+        // Handle jika pengguna tidak ditemukan
+        // ...
     }
+}
+
     public function userUpdate($npm)
 {
     // Mendapatkan instance dari session service
@@ -159,26 +191,34 @@ class User extends BaseController
 
 
 
-    public function userEdit($npm)
-    {
+public function userEdit($npm)
+{
+    $loggedInNpm = session('npm'); // Mendapatkan NPM pengguna yang sedang login
+
+    $user = $this->userModel->where('npm', $npm)->first();
+
+    if ($user) {
+        // Simpan kegiatan pengeditan pengguna dalam log aktivitas
+        $logModel = new \App\Models\LogModel();
+        $logData = [
+            'npm' => $loggedInNpm,
+            'action' => 'User_Update',
+            'details' => 'Pengguna ' . $user['npm'] . ' Telah Diperbarui',
+            'ip_address' => $this->request->getIPAddress()
+        ];
+        $logModel->insert($logData);
+
         $data = $this->request->getPost();
-        $user = $this->userModel
-            ->join('role', 'role.id_role = user.id_role')
-            ->join('status', 'status.id_status = user.id_status')
-            ->join('kartu', 'kartu.id_kartu = user.id_kartu')
-            ->where('npm', $npm)
-            ->first();
+        $this->userModel->update($user['npm'], $data); // Menggunakan id dari user untuk update data
+        session()->setFlashdata('berhasil', '<br>');
 
-        if ($user) {
-            $this->userModel->update($user['npm'], $data); // Menggunakan id dari user untuk update data
-            session()->setFlashdata('berhasil', '<br>');
-
-            // Misalkan Anda ingin juga melakukan update pada model kartu
-            $this->kartuModel->update($user['id_kartu'], $data); // Menggunakan id_kartu dari user untuk update data pada model kartu
-        } else {
-            session()->setFlashdata('gagal', '<br>');
-        }
-
-        return redirect()->to('admin/read');
+        // Misalkan Anda ingin juga melakukan update pada model kartu
+        $this->kartuModel->update($user['id_kartu'], $data); // Menggunakan id_kartu dari user untuk update data pada model kartu
+    } else {
+        session()->setFlashdata('gagal', '<br>');
     }
+
+    return redirect()->to('admin/read');
+}
+
 }

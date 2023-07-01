@@ -94,7 +94,7 @@ $this->section('page_content'); ?>
                             </td>
                             <td>
                                 <div class="btn-group">
-                                <a class="btn btn-warning btn-sm" href="<?= base_url(); ?>admin/update/<?= $u['npm']; ?>?season=<?= $user['npm']; ?>"><i class="bi bi-pencil-square"></i></a>
+                                <a class="btn btn-warning btn-sm" href="<?= base_url(); ?>admin/update/<?= $u['npm']; ?>"><i class="bi bi-pencil-square"></i></a>
 
                                     <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false" data-reference="parent">
                                         <span class="sr-only">Toggle Dropdown</span>
